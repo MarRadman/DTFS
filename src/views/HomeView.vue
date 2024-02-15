@@ -16,6 +16,7 @@
     här kommer en helt ointressant text.
     hejhejjhejhej
   </div>
+  
 </template>
 
 <script>
