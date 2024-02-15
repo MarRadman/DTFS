@@ -9,6 +9,17 @@
     <h2>Rökbomb</h2>
     <h3>rökbomb nr2</h3>
   </div>
+
+  <!--Skapat en ny div // David Nilsson, innehåller text-->
+  <div>
+    HEjsan alla kollegor
+    här kommer en helt ointressant text.
+    hejhejjhejhej
+  </div>
 </template>
 
-<script></script>
+<script>
+
+</script>
+
+
