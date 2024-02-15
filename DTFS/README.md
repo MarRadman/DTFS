@@ -1,1 +1,0 @@
-Digital trygghet för seniorer
