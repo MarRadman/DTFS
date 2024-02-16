@@ -24,13 +24,20 @@ nav {
   display: flex;
   min-width: 100%;
   height: auto;
+  border: solid yellow 1px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.navbar-brand {
+  border: solid red 1px;
+  flex-grow: 1;
+  position: sticky;
+}
+
+.bg-green {
+  background-color: #a0bc59;
 }
 
 #footerQuote {

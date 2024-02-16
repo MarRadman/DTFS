@@ -1,6 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Digital Trygghet för Seniorer</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-green">
     <button
       class="navbar-toggler"
       type="button"
@@ -20,10 +19,10 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/LoginComponent.vue">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -44,6 +43,7 @@
         </li>
       </ul>
     </div>
+    <a class="navbar-brand" href="#">Digital Trygghet för Seniorer</a>
   </nav>
 </template>
 
