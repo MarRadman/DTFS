@@ -30,6 +30,10 @@ nav {
   text-align: center;
 }
 
+.navbar-toggler {
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
+}
+
 .navbar-brand {
   border: solid red 1px;
   flex-grow: 1;
