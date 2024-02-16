@@ -44,11 +44,12 @@ nav {
 }
 
 .navbar-nav {
+  margin-left: 0.3%;
   display: flex;
-  align-items: flex-start;
-  max-width: 25%;
+  max-width: 10%;
   height: auto;
   border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
 }
 
 #footerQuote {
