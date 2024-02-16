@@ -11,3 +11,6 @@
         <b-button title="PC" img-src="#" img-alt="image" style="max-width: 20rem;" class="mb-2"></b-button>
     </div>
 </template>
+<script>
+
+</script>
