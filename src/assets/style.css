@@ -20,22 +20,10 @@ body {
   font-weight: 400;
 }
 
-#navMenu {
-  min-width: 100%;
-  min-height: auto;
-  font-size: 5vh;
-  font-weight: 500;
+nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  color: rgba(119, 194, 194, 0.9);
-  margin-bottom: 5%;
-}
-
-#navMenu :hover {
-  color: #c75123;
-  transition: 0.8s;
-  transform: scale(1.2);
+  min-width: 100%;
+  height: auto;
 }
 
 div {
