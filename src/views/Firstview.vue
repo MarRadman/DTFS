@@ -1,7 +1,7 @@
 <template>
     <h1>Välj din plattform för lärande</h1>
     <div>
-        <b-button title="Android" img-src="#" img-alt="Image" style="max-width: 20rem;" class="mb-2">
+                        <b-button title="Android" img-src="https://cdn.mos.cms.futurecdn.net/tcF5fR669mhPcH4akLWpTL-320-80.jpg" img-alt="Image" style="max-width: 20rem;" class="mb-2">
         </b-button>
     </div>
     <div>
