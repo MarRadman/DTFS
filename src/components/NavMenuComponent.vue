@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-green">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <button
       class="navbar-toggler"
       type="button"
@@ -11,20 +11,21 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <a class="navbar-brand bg-green" href="#">Digital Trygghet för Seniorer</a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
+      <ul class="navbar-nav bg-green">
+        <!-- <li class="nav-item active">
           <a class="nav-link" href="#"
             >Home <span class="sr-only">(current)</span></a
           >
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="/LoginComponent.vue">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -40,10 +41,9 @@
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
-    <a class="navbar-brand" href="#">Digital Trygghet för Seniorer</a>
   </nav>
 </template>
 
