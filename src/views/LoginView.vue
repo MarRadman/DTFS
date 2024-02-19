@@ -24,9 +24,9 @@
 
 <div>
     <form class="form-container">
-      <h2>Create Account</h2> 
+      <h2>Create Account</h2>
       <input type="text" v-model="username">
-      <input type="text" v-model="password"> 
+      <input type="text" v-model="password">
       <input type="text" v-model="password">
       <button>Sign up</button>
       <p>Already have an account? Login</p>
@@ -47,7 +47,7 @@ export default{
         }
     }
     // Jag kommer använda computed() för att kolla igenom villkoren.
-    // En v-if på Register formuläret. 
+    // En v-if på Register formuläret.
 }
 
 </script>
