@@ -10,7 +10,7 @@ body {
 #app {
   display: flex;
   flex-direction: column;
-  min-width: 100%;
+  width: 100%;
   min-height: auto;
   justify-content: center;
   align-items: center;
@@ -22,12 +22,17 @@ body {
 
 nav {
   display: flex;
-  min-width: 100%;
+  width: 100%;
   height: auto;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   position: relative;
+  background-color: #a0bc59;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
 }
 
 .navbar-toggler {
@@ -38,20 +43,6 @@ nav {
   flex-grow: 1;
   position: sticky;
 }
-
-.bg-green {
-  background-color: #a0bc59;
-}
-
-/* .navbar-nav {
-  margin-left: 0.3%;
-  display: flex;
-  height: auto;
-  border-bottom-right-radius: 30%;
-  border-bottom-left-radius: 30%;
-} */
-
-
 
 /* =================================================================
   CSS FÖR Andriod Selection View
