@@ -5,6 +5,7 @@ import SecView from "../views/SecondView.vue";
 import Android from "../views/Androidselectionview.vue";
 import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
+import Learning from "../views/LearningstepsView.vue";
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: "/android",
     component: Android,
+  },
+  {
+    path: "/learning",
+    component: Learning,
   }
 ];
 

@@ -4,7 +4,24 @@
     <input v-model="filterQuery" placeholder="filter helper" />
     <div class="filter">
     <!-- filtered choices -->
-    <div v-for="(imageId) in FilteredAndriod" class="mb-2">
+
+     <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
+      Tar bort detta när mer saker har införts till sidan //Martin-->
+  <div>
+    <b-card>
+      <router-link to="/learning">
+        <img
+          src="../assets/Andriod.jpg"
+          alt="android"
+          style="max-width: 20rem"
+          class="mb-2"
+        />
+      </router-link>
+    </b-card>
+  </div>
+  <!------------------------------------------------------------------------------------------------------------------->
+
+  <div v-for="(imageId) in FilteredAndriod" class="mb-2">
         <dd><img :src="getImageUrl(imageId)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem;"/></dd>
     </div>
     </div>
