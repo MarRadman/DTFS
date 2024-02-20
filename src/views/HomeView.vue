@@ -15,8 +15,7 @@
                 <div>
                   <!--
       <router-link to="#">-->
-            <img src="../assets/Windows2.jpg" alt="Windows" style="max-width: 20rem;" class="mb-
-2">
+              <img src="../assets/Windows2.jpg" alt="Windows" style="max-width: 20rem;" class="mb-2">
         <!--
       </route
 r-link>-->
