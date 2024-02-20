@@ -1,14 +1,14 @@
 <template>
   <h1>Välj din plattform för lärande</h1>
   <div>
-    <router-link to="/SecView">
+    <a href="./SecondView.vue">
       <img
         src="../assets/Andriod.jpg"
-        alt="Android"
+        alt="android"
         style="max-width: 20rem"
         class="mb-2"
       />
-    </router-link>
+    </a>
   </div>
   <div>
     <a href="#">
