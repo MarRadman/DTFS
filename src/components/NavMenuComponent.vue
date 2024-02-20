@@ -11,7 +11,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand bg-green" href="#">Digital Trygghet för Seniorer</a>
+    <a class="navbar-brand bg-green" href="../views/HomeView.vue">Digital Trygghet för Seniorer</a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav bg-green">
         <!-- <li class="nav-item active">
