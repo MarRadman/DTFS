@@ -21,8 +21,7 @@
             <img src="../assets/Windows2.jpg" alt="Windows" st yle="max-width: 20
 rem" class="mb-2" />
         <!--</router-link>-->
-      </b
--card>
+      </b-card>
   </div>
 </template>
 
