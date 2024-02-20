@@ -46,7 +46,6 @@
       >
     </b-card>
   </div>
-
   <div>
     <b-card
       title="Knapp 3"
