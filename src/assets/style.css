@@ -46,11 +46,22 @@ nav {
 .navbar-nav {
   margin-left: 0.3%;
   display: flex;
-  max-width: 10%;
   height: auto;
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 30%;
 }
+
+
+
+/* =================================================================
+  CSS FÖR Andriod Selection View 
+ ================================================================= */
+.filter{
+  padding: 20px;
+}
+/* ================================================================= 
+slut på Andriod Selection View
+=================================================================*/
 
 #footerQuote {
   color: rgba(67, 184, 129, 0.9);

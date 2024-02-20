@@ -1,8 +1,6 @@
 <template>
-  <h1>Test Formulär</h1>
-
   <div class="form">
-    <h2>LOGIN</h2>
+    <h2>MEMBER</h2>
     <form>
       <div class="form-container">
         <label for="username">USERNAME</label>
@@ -13,52 +11,6 @@
         <label for="password">PASSWORD</label>
         <input type="password" required />
       </div>
-
-      <div id="checkBox_Login">
-        <!--Kommer ej göra nånting, ska mest föreställa "riktigt" formulär-->
-        <label>Remember me</label><input type="checkbox" class="check" />
-      </div>
-
-      <router-link to="/"><button class="login-btn">LOGIN</button></router-link>
-      <!--Denna knapp ska ta oss till HomeView.-->
-      <p class="register">
-        New here? Please
-        <a href="#" class="register-link"><strong>Register</strong></a>
-      </p>
-    </form>
-  </div>
-
-  <!--CREATE ACCOUNT ska endast dyka upp när använder trycker på 'Register'-->
-  <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska använderaren skickas tillbaka till LOGIN-->
-
-  <div class="form">
-    <h2>CREATE ACCOUNT</h2>
-    <form>
-      <div class="form-container">
-        <label for="username">CHOOSE A USERNAME</label>
-        <input type="text" v-model="username" required />
-      </div>
-
-      <div class="form-container">
-        <label for="password">CHOOSE A PASSWORD</label>
-        <input type="text" v-model="password" required />
-      </div>
-      <div class="form-container">
-        <label for="password">TYPE PASSWORD AGAIN</label>
-        <input type="password" required />
-      </div>
-
-      <div class="terms">
-        <input class="check" type="checkbox" v-model="terms" />
-        <p>ACCEPT TERMS</p>
-      </div>
-
-      <button class="login-btn">SIGN UP</button>
-
-      <!--Kollar av om v-model fungerar-->
-      <p>Username: {{ username }}</p>
-      <p>Password: {{ password }}</p>
-      <p>Kolla terms: {{ terms }}</p>
     </form>
   </div>
 </template>
