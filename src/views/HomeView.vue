@@ -1,27 +1,29 @@
 <template>
-  <div>
-    <h1>Martin Simple is Key</h1>
-    <p>Funkar det här nu</p>
-    <h5>gr8</h5>
-    <h3>david nilsson</h3>
-    <h3>Khaliil Hassan</h3>
-    <h2>Nu skriver jag nått annat</h2>
-    <h1>VÄLKOMMEN TILL DOWN TO FUCK SENIORS</h1>
-    <h2>Rökbomb</h2>
-    <h3>rökbomb nr2</h3>
+  <h1>Välj din plattform för lärande</h1>
+        <div>
+          <b-card>
+            <router-link to="SecView">
+              <img src="../assets/Andriod.jpg" alt="android" style="max-width: 20rem" class="mb-2" />
+              Andriod
+            </router-link>
+          </b-card>
+        </div>
+        <div>
+          <b-card>
+            <!--<router-link to="#">-->
+            <img src="../assets/macbook.jpg" alt="Mac" style="max-width: 20rem" class="mb-2" />
+            <!--</router-link>-->
+          </b-card>
+        </div>
+        <div>
+          <b-card>
+            <!--<router-link to="#">-->
+            <img src="../assets/Windows2.jpg" alt="Windows" st yle="max-width: 20
+rem" class="mb-2" />
+        <!--</router-link>-->
+      </b
+-card>
   </div>
-
-  <!--Skapat en ny div // David Nilsson, innehåller text-->
-  <div>
-    HEjsan alla kollegor
-    här kommer en helt ointressant text.
-    hejhejjhejhej
-  </div>
-  
 </template>
 
-<script>
-
-</script>
-
-
+<script></script>

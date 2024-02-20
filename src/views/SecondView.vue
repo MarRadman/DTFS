@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/SecondViewComponent.vue
 <template>
                   <!--Jag använde först vanliga knappar och kopplade ihop med bild osv manuellt men såg sedan att någon hade gjort ett exempel med b-card
                   så jag kollade upp hur man använder det och bestämde mig för att göra på detta sättet istället. Känns smidigare. Har inte testat bootstrap
@@ -58,6 +59,9 @@
   </div>
 
 </template>
+=======
+<template>Hej</template>
+>>>>>>> db5cf53217515ade903c9599b85306e26d5ba4fb:src/views/SecondView.vue
 
 <script>
 export default {
