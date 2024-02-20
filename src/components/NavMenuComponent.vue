@@ -11,7 +11,9 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand bg-green" href="../views/HomeView.vue">Digital Trygghet för Seniorer</a>
+    <router-link to="/" class="navbar-brand bg-green"
+      >Digital Trygghet för Seniorer
+    </router-link>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav bg-green">
         <!-- <li class="nav-item active">
@@ -20,10 +22,10 @@
           >
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="/LoginComponent.vue">Login</a>
+          <router-link to="/login" class="nav-link">Login</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <router-link to="#" class="nav-link">About</router-link>
         </li>
         <!-- <li class="nav-item dropdown">
           <a
