@@ -35,7 +35,7 @@
       </b-card>
     </div>
   </div>
-  <router-link to="/android" class="navbar-brand" @click="scrollToTop">Back to Android Guides</router-link>
+  <router-link to="/android" @click="scrollToTop">Back to Android Guides</router-link>
 </template>
 
 <script>
