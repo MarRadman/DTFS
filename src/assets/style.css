@@ -43,23 +43,23 @@ nav {
   background-color: #a0bc59;
 }
 
-.navbar-nav {
+/* .navbar-nav {
   margin-left: 0.3%;
   display: flex;
   height: auto;
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 30%;
-}
+} */
 
 
 
 /* =================================================================
-  CSS FÖR Andriod Selection View 
+  CSS FÖR Andriod Selection View
  ================================================================= */
 .filter{
   padding: 20px;
 }
-/* ================================================================= 
+/* =================================================================
 slut på Andriod Selection View
 =================================================================*/
 

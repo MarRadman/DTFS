@@ -8,8 +8,6 @@
         <dd><img :src="getImageUrl(imageId)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem;"/></dd>
     </div>
     </div>
-    <!-- Router link to navigate to another page -->
-    <router-link to="/" class="link">Home</router-link>
 </main>
 </template>
 
