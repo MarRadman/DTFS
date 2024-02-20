@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<template></template>
-
-<Script></Script>
-=======
 <template>
 <main>
     <!-- Simple input for filtering Images -->
     <input v-model="filterQuery" placeholder="filter helper" />
     <div class="filter">
-    <!-- filtered choices -->   
+    <!-- filtered choices -->
     <div v-for="(imageId) in FilteredAndriod" class="mb-2">
         <dd><img :src="getImageUrl(imageId)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem;"/></dd>
     </div>
@@ -22,7 +17,7 @@
 export default {
 data() {
     return {
-    
+
     Images: [
     "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
     "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
@@ -34,10 +29,10 @@ data() {
     "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
     "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
     "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
-    
+
     ],
     ImageUrls: {},
-    
+
     filterQuery: '',
     };
 },
@@ -67,15 +62,14 @@ methods: {
         });
     });
     },
-    
+
     getImageUrl(imageId) {
     return this.ImageUrls[imageId] || '';
     },
-},  
+},
 };
 </script>
 
 <style>
 /* Add your styling here */
 </style>
->>>>>>> 11302cf669cf99395dac318a711cf8082de4ddcd
