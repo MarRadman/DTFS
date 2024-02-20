@@ -9,7 +9,6 @@
           style="max-width: 20rem"
           class="mb-2"
         />
-        Andriod
       </router-link>
     </b-card>
   </div>
@@ -31,8 +30,7 @@
       <img
         src="../assets/Windows2.jpg"
         alt="Windows"
-        st
-        yle="max-width: 20rem"
+        style="max-width: 20rem"
         class="mb-2"
       />
       <!--</router-link>-->
