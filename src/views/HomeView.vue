@@ -2,7 +2,7 @@
   <h1>Välj din plattform för lärande</h1>
   <div>
     <b-card>
-      <router-link to="SecView">
+      <router-link to="secView">
         <img
           src="../assets/Andriod.jpg"
           alt="android"

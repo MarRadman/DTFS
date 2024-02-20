@@ -2,12 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/HomeView.vue";
 import Login from "../views/LoginView.vue";
 import SecView from "../views/SecondView.vue";
-<<<<<<< HEAD
-import Andriod from "../views/androidselectionview.vue";
-=======
+import Android from "../views/androidselectionview.vue";
 import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
->>>>>>> 35abf052f24f203072cb262150cf835282427172
 
 const routes = [
   {
@@ -19,22 +16,21 @@ const routes = [
     component: Login,
   },
   {
-    path: "/SecView",
+    path: "/secView",
     component: SecView,
   },
   {
-<<<<<<< HEAD
-    path: "/Andriod",
-    component: Andriod,
-=======
     path: "/about",
     component: About,
   },
   {
     path: "/member",
     component: Member,
->>>>>>> 35abf052f24f203072cb262150cf835282427172
   },
+  {
+    path: "/android",
+    component: Android,
+  }
 ];
 
 const router = createRouter({
