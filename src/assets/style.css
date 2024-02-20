@@ -52,6 +52,18 @@ nav {
   border-bottom-left-radius: 30%;
 }
 
+
+
+/* =================================================================
+  CSS FÖR Andriod Selection View 
+ ================================================================= */
+.filter{
+  padding: 20px;
+}
+/* ================================================================= 
+slut på Andriod Selection View
+=================================================================*/
+
 #footerQuote {
   color: rgba(67, 184, 129, 0.9);
   font-family: "Courier New", system-ui, Avenir, Helvetica, Arial, sans-serif;
