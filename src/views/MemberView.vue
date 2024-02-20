@@ -33,6 +33,7 @@ export default {
 
 <style>
 .form {
+  /*TODO: Plocka bort detta sen och lägg till detta i style.css */
   display: flex;
   flex-direction: column;
   justify-content: center;
