@@ -1,7 +1,7 @@
 <template>
   <h1>Välj din plattform för lärande</h1>
-      <div>
-          <a href="./SecondView.vue">
+            <div>
+              <a href="./SecondView.vue">Andriod
           <img src="../assets/Andriod.jpg" alt="android" style="max-width: 20rem" class="mb-2">
           </a>
       </div>
