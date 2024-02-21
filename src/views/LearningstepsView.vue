@@ -2,7 +2,7 @@
 
 <template>
     <!--bara mall för hur man kan göra-->
-    <!--
+
 <div>
     <div>
       <h4>Top and Bottom</h4>
@@ -12,7 +12,7 @@
             Some quick example text to build on the card and make up the bulk of the card's content.
           </b-card-text>
         </b-card>
-  
+
         <b-card img-src="https://placekitten.com/1000/300" img-alt="Card image" img-bottom>
           <b-card-text>
             Some quick example text to build on the card and make up the bulk of the card's content.
@@ -27,7 +27,7 @@
           Some quick example text to build on the card and make up the bulk of the card's content.
         </b-card-text>
       </b-card>
-  
+
       <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right>
         <b-card-text>
           Some quick example text to build on the card and make up the bulk of the card's content.
@@ -35,5 +35,15 @@
       </b-card>
     </div>
   </div>
--->
+  <router-link to="/android" @click="scrollToTop">Back to Android Guides</router-link>
 </template>
+
+<script>
+export default { // Detta är för komma längst upp på sidan man router-linka till.
+methods: {
+    scrollToTop() {
+        window.scrollTo(0, 0); // Scrolla till (x, y) = (0, 0)
+    }
+}
+}
+</script>

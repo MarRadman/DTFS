@@ -1,3 +1,90 @@
-<template></template>
+<template>
+<main>
+    <!-- Simple input for filtering Images -->
+    <input v-model="filterQuery" placeholder="filter helper" />
+    <div class="filter">
+    <!-- filtered choices -->
 
-<Script></Script>
+     <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
+      Tar bort detta när mer saker har införts till sidan //Martin-->
+  <div>
+    <b-card>
+      <router-link to="/learning">
+        <img
+          src="../assets/Andriod.jpg"
+          alt="android"
+          style="max-width: 20rem"
+          class="mb-2"
+        />
+      </router-link>
+    </b-card>
+  </div>
+  <!------------------------------------------------------------------------------------------------------------------->
+
+  <div v-for="(imageId) in FilteredAndriod" class="mb-2">
+        <dd><img :src="getImageUrl(imageId)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem;"/></dd>
+    </div>
+    </div>
+</main>
+</template>
+
+<script>
+export default {
+data() {
+    return {
+
+    Images: [
+    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
+    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
+    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
+    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
+    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
+    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
+    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
+    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
+    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
+    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
+
+    ],
+    ImageUrls: {},
+
+    filterQuery: '',
+    };
+},
+computed: {
+    // Image IDs  filterQuery
+    FilteredAndriod() {
+    return this.Images.filter(imageId =>
+        imageId.toLowerCase().includes(this.filterQuery.toLowerCase())
+    );
+    },
+},
+created() {
+    // Fetch image URLs
+    this.fetchImageUrls();
+},
+methods: {
+    // Fetch image URLs foreach
+    fetchImageUrls() {
+    this.Images.forEach(imageId => {
+        fetch(`https://source.unsplash.com/${imageId}/800x600`)
+        .then(response => response.url)
+        .then(url => {
+            this.ImageUrls[imageId] = url;
+        })
+        .catch(error => {
+            console.error(`Error fetching image ${imageId}:`, error);
+        });
+    });
+    },
+
+    getImageUrl(imageId) {
+    return this.ImageUrls[imageId] || '';
+    },
+},
+};
+</script>
+
+<style>
+/* Add your styling here */
+</style>
