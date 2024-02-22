@@ -79,9 +79,6 @@ getImageUrl(imagePath) {
     display: none;
 }
 
-    #search {
-    margin-top: 10dvh;
-}
 
 
 
