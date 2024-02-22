@@ -1,7 +1,7 @@
 <template>
 <main id="scroll-container">
     <!-- Simple input for filtering Images -->
-    <input v-model="filterQuery" placeholder="filter helper" />
+    <input v-model="filterQuery" placeholder="filter helper" id="search" />
     <div class="filter">
 
     <!-- filtered choices -->
@@ -70,6 +70,16 @@ getImageUrl(imagePath) {
     #scroll-container{
         overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 80vh;
-    }
+        max-height: 100dvh;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+}
+
+    #scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
 </style>
