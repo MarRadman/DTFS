@@ -14,6 +14,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.21.1",
     "jquerry": "^0.0.1-security",
+    "save-dev": "^0.0.1-security",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
