@@ -110,10 +110,10 @@
             setTimeout(()=> {
               this.switchForm = false;
             
-              //this.username = "",
-              //this.password = "",
-              //this.terms = false,
-              //this.confirmPassword = ""
+              this.username = "",
+              this.password = "",
+              this.terms = false,
+              this.confirmPassword = ""
             },2500)
             
           }else{
