@@ -31,7 +31,7 @@
   <div>
     <b-card>
       <img
-        src="../assets/"
+        src="../assets/Windows2.jpg"
         alt="David Arvidsson"
         style="max-width: 20rem"
         class="mb-2"
@@ -42,7 +42,7 @@
   <div>
     <b-card>
       <img
-        src="../assets/"
+        src="../assets/Windows2.jpg"
         alt="David Nilsson"
         style="max-width: 20rem"
         class="mb-2"
@@ -53,7 +53,7 @@
   <div>
     <b-card>
       <img
-        src="../assets/"
+        src="../assets/Windows2.jpg"
         alt="Martin Rådmans"
         style="max-width: 20rem"
         class="mb-2"
@@ -64,7 +64,7 @@
   <div>
     <b-card>
       <img
-        src="../assets/"
+        src="../assets/Windows2.jpg"
         alt="Khalil Hassan"
         style="max-width: 20rem"
         class="mb-2"
@@ -75,7 +75,7 @@
   <div>
     <b-card>
       <img
-        src="../assets/"
+        src="../assets/Windows2.jpg"
         alt="Jonathan Andersson"
         style="max-width: 20rem"
         class="mb-2"

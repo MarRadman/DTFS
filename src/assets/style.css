@@ -20,6 +20,11 @@ body {
   font-weight: 400;
 }
 
+.views {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 nav {
   display: flex;
   width: 100%;
