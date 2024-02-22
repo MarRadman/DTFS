@@ -24,9 +24,9 @@
     </b-card>
   </div>
 
-    <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
+  <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
       Tar bort detta när mer saker har införts till sidan //Martin-->
-  <div>
+  <!-- <div>
     <b-card>
       <router-link to="/android">
         <img
@@ -37,7 +37,7 @@
         />
       </router-link>
     </b-card>
-  </div>
+  </div> -->
   <!------------------------------------------------------------------------------------------------------------------->
   <div>
     <b-card

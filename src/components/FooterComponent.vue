@@ -1,7 +1,6 @@
 <template>
-  <footer>
+  <footer class="fixed-bottom">
     <p id="footerQuote">Simple is key</p>
-    <p>&copy; 2024 All rights reserved</p>
   </footer>
 </template>
 
