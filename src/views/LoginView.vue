@@ -1,29 +1,30 @@
 <template>
-
+  
   <h1>Test Formulär </h1>
-
+  
   <div v-if="!switchForm" class="form">
    <h2>LOGIN</h2>
    <form>
       <div class="form-container">
        <label for="username">USERNAME</label>
-       <input type="text" v-model="registeredUsername" required>
+       <input type="text"  required>
       </div>
-
+  
       <div class="form-container">
       <label for="password">PASSWORD</label>
-      <input type="text" v-model="registeredPassword" required>
+      <input type="text"  required>
       </div>
-    <router-link to="./"> <!-- Ta bort när det fungerar -->
-      <button class="login-btn">LOGIN</button>  <!--Denna knapp ska ta oss till HomeView.-->
-    </router-link> <!-- Ta bort när det fungerar -->
+  
+      <button @click="login" class="login-btn">LOGIN</button> <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
+  
    </form>
+  
   </div>
-
+  
   <!--CREATE ACCOUNT ska endast dyka upp när använder trycker på 'Register'-->
   <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska användaren skickas tillbaka till LOGIN-->
-
+  
   <div v-if="switchForm" class="form">
       <h2>CREATE ACCOUNT</h2>
       <form @submit="submitForm">
@@ -31,7 +32,7 @@
               <label for="username">CHOOSE A USERNAME</label>
               <input type="text"  v-model="username" required>
           </div>
-
+  
           <div class="form-container">
               <label for="password">CHOOSE A PASSWORD</label>
               <input type="text" v-model="password" required>
@@ -40,51 +41,50 @@
               <label for="password">TYPE PASSWORD AGAIN</label>
               <input type="text" v-model="confirmPassword" required>
           </div>
-
+  
           <div class="terms">
               <input id="check" type="checkbox" v-model="terms">
               <p>ACCEPT TERMS</p>
           </div>
-
-          <button class="login-btn" @click="updateUserClick"  >SIGN UP</button>
-
-          <div v-if="errorMessage && userClick" class="error-message">
-            <h3>You need to fill in correct.</h3>
-            <p>10 letters for username.</p>
-            <p>10 letters for password. With upper and lowercases.</p>
-            <p>You also need to accept the terms. <br>Press the checkbox</p>
+          
+          <button class="login-btn" >SIGN UP</button>
+  
+          <div v-if="showErrorMessage" class="error-message">
+            <p>* You need to type in 10 letters in Username</p>
+            <p>* You need to type in 10 letters in Password</p>
+            <p>* In upper and lowercase</p>
+            <p>* And you also need to fill in the checkbox to confirm the terms</p>
+            <button @click="hideBtn">GOT IT</button>
           </div>
-
+  
       </form>
   </div>
-
+  
   </template>
-
+  
   <script>
-
+  
    export default{
-
+  
       data(){
-          return{    // Dessa variabler ska sedan användas som villkor i formuläret.
+          return{    // Dessa variabler ska sedan användas som villkor i formuläret. 
               username: "",
               password: "",
               confirmPassword: "",
               terms: false,
               switchForm: false,
-              errorMessage: false, // lägg till en till variabel, som säger att användaren klickat på knappen eller inte.
-              userClick: false,
-
+              showErrorMessage: false,
           }
       },
-
+  
       computed: {    // Jag sätter olika villkor för vad använder måste fylla i för att formuläret ska vara godkänt.
         lowerCase() {
-          return /[a-z]/.test(this.password)
+          return /[a-z]/.test(this.password) 
         },
         upperCase(){
-          return /[A-Z]/.test(this.password)
+          return /[A-Z]/.test(this.password) 
         },
-
+        
         isFormValid() {
           if(this.username.length >= 10 &&
           this.password.length >= 10 &&
@@ -96,42 +96,52 @@
           }else{
             return false;
           }
-
+  
         }
       },
-
-      methods: { // Jag vill att när man uppfyllt alla krav och trycker på Sign Up knappen, ska man gå tillbaka till Login.
+  
+      methods: { // Jag vill att när man uppfyllt alla krav och trycker på Sign Up knappen, ska man gå tillbaka till Login. 
                 // Samt tömma fälten så inte all text ligger kvar.
         submitForm(){
           if(this.isFormValid){
             console.log('Det går att registrera.', this.isFormValid)
             alert('Registerar konto...')
+  
             setTimeout(()=> {
               this.switchForm = false;
-
+            
               this.username = "",
               this.password = "",
               this.terms = false,
               this.confirmPassword = ""
-            },2500)
-
+              
+            },3000)
+            
           }else{
-            this.errorMessage = true;  // Något här som inte stämmer, vill få upp min div med error message. ta hjälp på handledning.
+            this.showErrorMessage = true 
+            this.username = "";
+            this.password = "";
+            this.confirmPassword = "";
+            this.terms = false; 
           }
-
+   
         },
-
+        hideBtn(){  // Enda som händer här är att när man trycker på knappen så försvinner 
+          this.showErrorMessage = false;
+        }
+  
+        
         // Skapa en timeout på typ 1.5 sekund, för att låta användaren hinna reagera vad det är som händer när man trycker på registera. Vill inte få det uppkastat direkt på sig.
         // Kanske en animation för att få en smooth övergång.
       }
   }
-
+  
   </script>
-
+  
   <style>
-
+  
   .form{
-
+  
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -143,14 +153,13 @@
       border-bottom: solid black 1px;
       border-radius: 10px;
       background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(192,255,194,0.9136029411764706) 0%, rgba(157,247,205,1) 100%, rgba(0,212,255,1) 100%);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(199,226,145,1) 0%, rgba(160,188,89,0.79) 100%, rgba(0,212,255,1) 100%);
       text-align: center;
       box-shadow: 10px 5px 5px rgb(86, 82, 82);
-
   }
   label{
       text-align: center;
-      color: #aaa;
+      color: #aaa;    
       display: inline-block;
       margin: 20px 0 10px;
       font-size: 1rem;
@@ -158,7 +167,6 @@
   }
   .form-container{
       margin-bottom: 15px;
-
   }
   .login-btn{
       background-color: #A0BC59;
@@ -171,20 +179,20 @@
       margin-top: 10px;
       transition: background-color 0.3s ease;
   }
-
+  
   .login-btn:hover{
     background-color: green;
   }
-
+  
   input{
       background-color: seashell;
       color: black;
       display: block;
       padding: 5px 3px;
       width: 100%;
-
+      
   }
-
+  
   .register{
       margin-top: 40px;
   }
@@ -193,16 +201,16 @@
     color: green;
     font-style: italic;
     margin-left: 10px;
-
+    
   }
-
+  
   .terms{
       display: flex;
       justify-content: space-between;
   }
-
+  
   .terms p {
-
+   
       margin-left: 20px;
       margin-top: 5px;
       padding-top: 5px;
@@ -217,11 +225,42 @@
   .btn-red{
     background-color: yellow;
   }
-
+  
   .error-message{
-    width: 300px;
-    height: 300px;
-    border: solid black 2px;
+    max-width: 300px;
+    padding: 20px;
+    border: solid #ff3333 .5px;
+    border-bottom-right-radius: 80px 80px;
+    background-color: seashell;
+    margin-top: 20px;
+    text-align: center;
   }
-
+  .error-message p{
+   
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+  
+  }
+  .error-message button{
+   color: #ff055d;
+   padding: 0.8em 1.7em;
+   background-color: transparent;
+   border-radius: .3em;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   transition: .5s;
+   font-weight: 400;
+   font-size: 17px;
+   border: 1px solid;
+   font-family: inherit;
+   text-transform: uppercase; 
+   box-shadow: 7px 3px 1px rgb(86, 82, 82);
+  }
+  
+  .error-message button:hover{
+    background-color: #dcd6d8;
+    border-color: #ff055d;
+  }
+  
   </style>
