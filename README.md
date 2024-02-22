@@ -1,2 +1,1 @@
-Digital trygghet för seniorer
-[Click me](https://marradman.github.io/DTFS/)
+[Digital trygghet för seniorer](https://marradman.github.io/DTFS/index.html)

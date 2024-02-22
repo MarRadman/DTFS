@@ -35,7 +35,7 @@ const routes = [
   {
     path: "/learning",
     component: Learning,
-  }
+  },
 ];
 
 const router = createRouter({
