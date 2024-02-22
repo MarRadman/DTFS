@@ -21,19 +21,19 @@ body {
 }
 
 .views {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 nav {
   display: flex;
   width: 100%;
   height: auto;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
-  background-color: #a0bc59;
+  background-color: #a0bc59c9;
 }
 
 .navbar-collapse {
@@ -42,11 +42,6 @@ nav {
 
 .navbar-toggler {
   box-shadow: 0.5px 0.5px 2px 0.5px black;
-}
-
-.navbar-brand {
-  flex-grow: 1;
-  position: sticky;
 }
 
 /* =================================================================
@@ -65,7 +60,7 @@ slut på Andriod Selection View
 }
 
 footer {
-  background-color: #a0bc59;
+  background-color: #a0bc59c9;
   width: 100%;
   height: 25px;
   z-index: 1000;

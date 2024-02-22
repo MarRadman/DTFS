@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light bg-green fixed-top">
+  <nav class="navbar navbar-light fixed-top">
     <button
       class="navbar-toggler"
       type="button"
@@ -11,19 +11,39 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <router-link to="/" class="navbar-brand"
-      >Digital Trygghet för Seniorer
-    </router-link>
+    <h1>
+      <router-link to="/" class="navbar-brand"
+        >Digital Trygghet för Seniorer
+      </router-link>
+    </h1>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav" style="color: Black" font-weight="500">
         <li class="nav-item">
-          <router-link to="/login" class="nav-link">Login</router-link>
+          <router-link
+            to="/login"
+            class="nav-link"
+            style="color: Black"
+            font-weight="500"
+            >Login</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/member" class="nav-link">Member</router-link>
+          <router-link
+            to="/member"
+            class="nav-link"
+            style="color: Black"
+            font-weight="500"
+            >Member</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link to="/about" class="nav-link">About</router-link>
+          <router-link
+            to="/about"
+            class="nav-link"
+            style="color: Black"
+            font-weight="500"
+            >About</router-link
+          >
         </li>
         <!-- <li class="nav-item dropdown">
           <a
