@@ -1,90 +1,75 @@
 <template>
-<main>
+<main id="scroll-container">
     <!-- Simple input for filtering Images -->
     <input v-model="filterQuery" placeholder="filter helper" />
     <div class="filter">
+
     <!-- filtered choices -->
-
-     <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
-      Tar bort detta när mer saker har införts till sidan //Martin-->
-  <div>
-    <b-card>
-      <router-link to="/learning">
-        <img
-          src="../assets/Andriod.jpg"
-          alt="android"
-          style="max-width: 20rem"
-          class="mb-2"
-        />
-      </router-link>
+    <div v-for="(image, index) in FilteredAndriod" :key="index" class="mb-2">
+    <b-card style="padding: 0; margin: 0;">
+        <router-link v-if="image.link" :to="image.link">
+            <img :src="getImageUrl(image.path)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem; padding: 0;margin: 0; object-fit: cover;"/>
+        </router-link>
+            <p>{{ image.description }}</p>
+        
     </b-card>
-  </div>
-  <!------------------------------------------------------------------------------------------------------------------->
-
-  <div v-for="(imageId) in FilteredAndriod" class="mb-2">
-        <dd><img :src="getImageUrl(imageId)" alt="Image" class="mb-2" style="height: 20rem; width: 20rem;"/></dd>
     </div>
-    </div>
+</div>
 </main>
 </template>
 
-<script>
+<<<<<<<<<<<<<<<script>
 export default {
 data() {
-    return {
-
+return {
     Images: [
-    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
-    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
-    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
-    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
-    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
-    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
-    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
-    "turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI",
-    "turned-off-macbook-pro-beside-white-ceramic-mug-filled-with-coffee-aOC7TSLb1o8",
-    "laptop-computer-beside-coffee-mug-j4uuKnN43_M",
-
+    { path: "src/assets/learning.jpg", description: "learning", link: "/learning" },
+    { path: "src/assets/help 2.jpg", description: "Description 2", link: "/help" },
+    { path: "src/assets/help 3.jpg", description: "Description 3", link: "/help" },
+    { path: "src/assets/help 4.jpg", description: "Description 4", link: "/help" },
+    { path: "src/assets/help 5.jpg", description: "Description 5", link: "/help" },
+    { path: "src/assets/help 6.jpg", description: "Description 6", link: "/help" },
+    { path: "src/assets/help 7.jpg", description: "Description 7", link: "/help" },
+    { path: "src/assets/help 8.jpg", description: "Description 8",  link: "/help"},
+    { path: "src/assets/help 9.jpg", description: "Description 9", link: "/help" },
+    { path: "src/assets/help 10.jpg", description: "Description 10", link: "/help"},
+    // lägg till mer bilder med information om behövs
     ],
     ImageUrls: {},
-
     filterQuery: '',
-    };
+};
 },
 computed: {
-    // Image IDs  filterQuery
-    FilteredAndriod() {
-    return this.Images.filter(imageId =>
-        imageId.toLowerCase().includes(this.filterQuery.toLowerCase())
+// Image filterQuery
+FilteredAndriod() {
+    return this.Images.filter(image =>
+    image.path.toLowerCase().includes(this.filterQuery.toLowerCase())
     );
-    },
+},
 },
 created() {
-    // Fetch image URLs
-    this.fetchImageUrls();
+this.setHardcodedImageUrls();
 },
 methods: {
-    // Fetch image URLs foreach
-    fetchImageUrls() {
-    this.Images.forEach(imageId => {
-        fetch(`https://source.unsplash.com/${imageId}/800x600`)
-        .then(response => response.url)
-        .then(url => {
-            this.ImageUrls[imageId] = url;
-        })
-        .catch(error => {
-            console.error(`Error fetching image ${imageId}:`, error);
-        });
+setHardcodedImageUrls() {
+    this.Images.forEach(image => {
+    this.ImageUrls[image.path] = image.path;
     });
-    },
-
-    getImageUrl(imageId) {
-    return this.ImageUrls[imageId] || '';
-    },
 },
+getImageUrl(imagePath) {
+    return this.ImageUrls[imagePath] || '';
+        },
+    },
 };
 </script>
 
-<style>
-/* Add your styling here */
+
+
+
+<style scoped>
+    #scroll-container{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 80vh;
+    }
 </style>
