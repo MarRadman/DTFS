@@ -3,30 +3,70 @@
                   så jag kollade upp hur man använder det och bestämde mig för att göra på detta sättet istället. Känns smidigare. Har inte testat bootstrap
                   så mycket än så skall skapa ett separat dokument på datorn så jag kan se hur det ser ut och style'a så det ser rätt ut då.
                   Majoriteten av koden skriven 02-20-2024 //Jonathan-->
-  <div>
+<div class="container">
+  <div id="conOne">
     <b-card
-      title="Knapp 1"
-      img-src=""
-      img-alt=""
-      img-top
-      tag=""
-      style="max-width: 20rem"
-      class="mb-2"
-    >
+      id="cardOne">
+    <img
+      style="max-width: 15rem; max-height: 10rem;"
+      src="../assets/Andriod.jpg"
+      alt="Android">
       <b-card-text>
-        Knapp 1 som skall leda till en annan komponent på sidan.
-      </b-card-text>
+        <h1>Step by Step</h1>
 
-      <b-button @click="navigateToNextPage('')" variant="primary"
-        >Klicka här</b-button
-      >
-      <!--Komponentnamn i paratesen vid @click så kommer man vidare till nästa komponent-->
+        <p>Your guide of learning basic IT</p>
+      </b-card-text>
+      <b-button
+      style="background-color: blue;"
+      router-link to="/android"
+        >Start</b-button>
     </b-card>
   </div>
 
+  <div id="conTwo">
+    <b-card
+      id="cardTwo">
+    <img
+      style="max-width: 15rem; max-height: 10rem;"
+      src="../assets/Quiz.jpg"
+      alt="Quiz">
+      <b-card-text>
+        <h1>Quiz</h1>
+
+        <p>Test your knowledge in a quiz!</p>
+      </b-card-text>
+
+      <b-button
+      style="background-color: blue;"
+      router-link to="/android"
+        >Start</b-button>
+    </b-card>
+  </div>
+
+  <div id="conThree">
+    <b-card
+      id="cardThree">
+    <img
+      style="max-width: 15rem; max-height: 10rem;"
+      src="../assets/Community.jpg"
+      alt="Community">
+      <b-card-text>
+        <h1>Community</h1>
+
+        <p>Join the community with others and share your thoughts and skills</p>
+      </b-card-text>
+
+      <b-button
+      style="background-color: blue;"
+      router-link to="/android"
+        >Start</b-button>
+    </b-card>
+  </div>
+  <!--Kommenterade ut den tillfälliga lösningen och fixade den första knappen istället //Jonathan-->
     <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
       Tar bort detta när mer saker har införts till sidan //Martin-->
-  <div>
+
+    <!-- <div>
     <b-card>
       <router-link to="/android">
         <img
@@ -37,57 +77,14 @@
         />
       </router-link>
     </b-card>
-  </div>
-  <!------------------------------------------------------------------------------------------------------------------->
-  <div>
-    <b-card
-      title="Knapp 2"
-      img-src=""
-      img-alt=""
-      img-top
-      tag=""
-      style="max-width: 20rem"
-      class="mb-2"
-    >
-      <b-card-text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-        consequatur, similique, quam doloribus adipisci odio illo facilis
-        accusantium voluptates ex ducimus maiores et sunt totam dignissimos
-        natus dicta itaque placeat?
-      </b-card-text>
+  </div> -->
+</div>
 
-      <b-button @click="navigateToNextPage('')" variant="primary"
-        >Klicka här</b-button
-      >
-    </b-card>
-  </div>
-  <div>
-    <b-card
-      title="Knapp 3"
-      img-src=""
-      img-alt=""
-      img-top
-      tag=""
-      style="max-width: 20rem"
-      class="mb-2"
-    >
-      <b-card-text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsum odio
-        quidem animi ut quos fugiat, tempora sint quaerat suscipit expedita,
-        iusto necessitatibus velit consectetur ea voluptas dolore sapiente.
-        Voluptates!
-      </b-card-text>
-
-      <b-button @click="navigateToNextPage('')" variant="primary"
-        >Klicka här</b-button
-      >
-    </b-card>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "SeconViewComponent",
+  name: "SecView",
 
   // methods: {
 
@@ -98,3 +95,43 @@ export default {
   // }
 };
 </script>
+
+<style>
+
+@media screen and (max-width: 768px) {
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#conOne {
+  padding: 1rem;
+}
+
+#conTwo {
+  padding: 1rem;
+}
+
+#conThree {
+  padding: 1rem;
+}
+
+#cardOne {
+  width: 20rem;
+  height: 23rem;
+}
+
+#cardTwo {
+  width: 20rem;
+  height: 23rem;
+}
+
+#cardThree {
+  width: 20rem;
+  height: 23rem;
+}
+}
+
+
+</style>
