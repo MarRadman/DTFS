@@ -15,7 +15,11 @@
       <input type="text"  required>
       </div>
       
+<<<<<<< HEAD
       <Router-link to="./HomeView">
+=======
+      <Router-link to="/">
+>>>>>>> 553ee473d00cb150303a6e606ea5210cb5b5e797
       <button @click="login" class="login-btn">LOGIN</button>
       </Router-link> <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
