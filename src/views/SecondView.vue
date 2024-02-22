@@ -23,6 +23,7 @@
     </b-card>
   </div>
 
+<<<<<<< HEAD
   <div id="conTwo">
     <b-card
       id="cardTwo">
@@ -67,6 +68,11 @@
       Tar bort detta när mer saker har införts till sidan //Martin-->
 
     <!-- <div>
+=======
+  <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
+      Tar bort detta när mer saker har införts till sidan //Martin-->
+  <!-- <div>
+>>>>>>> 1e6c6f10bcac3ef7a5febc7a454949da3d25816a
     <b-card>
       <router-link to="/android">
         <img
@@ -78,7 +84,27 @@
       </router-link>
     </b-card>
   </div> -->
+<<<<<<< HEAD
 </div>
+=======
+  <!------------------------------------------------------------------------------------------------------------------->
+  <div>
+    <b-card
+      title="Knapp 2"
+      img-src=""
+      img-alt=""
+      img-top
+      tag=""
+      style="max-width: 20rem"
+      class="mb-2"
+    >
+      <b-card-text>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+        consequatur, similique, quam doloribus adipisci odio illo facilis
+        accusantium voluptates ex ducimus maiores et sunt totam dignissimos
+        natus dicta itaque placeat?
+      </b-card-text>
+>>>>>>> 1e6c6f10bcac3ef7a5febc7a454949da3d25816a
 
 </template>
 
