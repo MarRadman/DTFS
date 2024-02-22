@@ -153,7 +153,7 @@
       border-bottom: solid black 1px;
       border-radius: 10px;
       background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(199,226,145,1) 0%, rgba(160,188,89,0.79) 100%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(199,226,145,1) 0%, rgba(160,188,89,0.79) 100%, rgba(0,212,255,1) 100%);
       text-align: center;
       box-shadow: 10px 5px 5px rgb(86, 82, 82);
   }
@@ -235,32 +235,7 @@
     margin-top: 20px;
     text-align: center;
   }
-  .error-message p{
-   
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-  
-  }
-  .error-message button{
-   color: #ff055d;
-   padding: 0.8em 1.7em;
-   background-color: transparent;
-   border-radius: .3em;
-   position: relative;
-   overflow: hidden;
-   cursor: pointer;
-   transition: .5s;
-   font-weight: 400;
-   font-size: 17px;
-   border: 1px solid;
-   font-family: inherit;
-   text-transform: uppercase; 
-   box-shadow: 7px 3px 1px rgb(86, 82, 82);
-  }
-  
-  .error-message button:hover{
-    background-color: #dcd6d8;
-    border-color: #ff055d;
-  }
-  
+
   </style>
+
+  
