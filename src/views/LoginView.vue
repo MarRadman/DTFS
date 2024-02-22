@@ -15,7 +15,7 @@
       <input type="text" v-model="registeredPassword" required>
       </div>
   
-      <button @click="login" class="login-btn">LOGIN</button> <!--Denna knapp ska ta oss till HomeView.-->
+      <button class="login-btn">LOGIN</button>  <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
   
    </form>
@@ -55,14 +55,7 @@
             <p>10 letters for password. With upper and lowercases.</p>
             <p>You also need to accept the terms. <br>Press the checkbox</p>
           </div>
-  
-  
-          <!--Kollar av om v-model fungerar-->
-          <p> Username: {{ username }}</p>
-          <p>Password: {{ password }}</p>
-          <p>Kolla checkbox: {{ terms }}</p>
-          <p>Villkoren: {{ isFormValid }}</p>
-        
+      
       </form>
   </div>
   
@@ -81,9 +74,7 @@
               switchForm: false,
               errorMessage: false, // lägg till en till variabel, som säger att användaren klickat på knappen eller inte.
               userClick: false,
-              registeredUsername: "",
-              registeredPassword: ""
-  
+         
           }
       },
   
@@ -115,7 +106,7 @@
         submitForm(){
           if(this.isFormValid){
             console.log('Det går att registrera.', this.isFormValid)
-            alert('Registerat konto')
+            alert('Registerar konto...')
             setTimeout(()=> {
               this.switchForm = false;
             
@@ -130,18 +121,7 @@
           }
    
         },
-        login(){
-          console.log(this.username + this.registeredPassword, + this.password + this.registeredUsername, "Det fungerar.")
-  
-          if(this.username === this.registeredUsername &&
-          this.password === this.registeredPassword){
-            alert('Du är inloggad')
-          }else{
-            alert('Fel inloggningsuppifter')
-            
-          }
-        },
-        
+      
         // Skapa en timeout på typ 1.5 sekund, för att låta användaren hinna reagera vad det är som händer när man trycker på registera. Vill inte få det uppkastat direkt på sig.
         // Kanske en animation för att få en smooth övergång.
       }
