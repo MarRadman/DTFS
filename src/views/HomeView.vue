@@ -10,20 +10,20 @@
           </div>
         <div>
           <b-card>
-          <!--<router-link to="#">-->
-          <img src="../assets/macbook.jpg" alt="Mac" style="max-width: 20rem" class="mb-2" />
-          <span style="position: absolute; bottom: 0; right: 40%; transform: translateY(-50%); color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; font-size: 20px; font-weight: bold;">Apple</span>
-        <!--</router-link>-->
-           </b-card>
-          </div>
-          <div>
-        <b-card>
-        <!--<router-link to="#">-->
-        <img src="../assets/Windows2.jpg" alt="Windows" style="max-width:20rem" class="mb-2" />
-      <span style="position: absolute; bottom: 0; right: 40%; transform: translateY(-50%); color: white;background-color: rgba(0, 0, 0, 0
+                <!--<router-link to="#">--> <!--uppdateras under sprint två-->
+              <img src="../assets/macbook.jpg" alt="Mac" style="max-width: 20rem" class="mb-2" />
+              <span style="position: absolute; bottom: 0; right: 40%; transform: translateY(-50%); color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; font-size: 20px; font-weight: bold;">Apple</span>
+              <!--</router-link>--> <!--uppdateras under sprint två-->
+             </b-card>
+            </div>
+            <div>
+          <b-card>
+              <!--<router-link to="#">--> <!--uppdateras under sprint två-->
+            <img src="../assets/Windows2.jpg" alt="Windows" style="max-width:20rem" class="mb-2" />
+          <span style="position: absolute; bottom: 0; right: 40%; transform: translateY(-50%); color: white;background-color: rgba(0, 0, 0, 0
 .5); padding: 5px; font-size: 20px; font-wei
 ght: bold;">Windows</span>
-  <!--</router-link>-->
+        <!--</router-link>--> <!--uppdateras under sprint två-->
 </b-card>
 </div>
 </template>

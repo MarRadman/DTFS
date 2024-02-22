@@ -116,7 +116,7 @@ export default {
   }
 
   #buttons {
-    background-color: blue;
+    background-color: #C7E291;
   }
 }
 

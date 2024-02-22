@@ -143,7 +143,7 @@
       border-bottom: solid black 1px;
       border-radius: 10px;
       background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(192,255,194,0.9136029411764706) 0%, rgba(157,247,205,1) 100%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(199,226,145,1) 0%, rgba(160,188,89,0.79) 100%, rgba(0,212,255,1) 100%);
       text-align: center;
       box-shadow: 10px 5px 5px rgb(86, 82, 82);
 
@@ -225,3 +225,5 @@
   }
 
   </style>
+
+  
