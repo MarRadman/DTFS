@@ -1,5 +1,6 @@
 <template>
   <nav class="navbar navbar-light fixed-top">
+    <div id="navBtn_Title">
     <button
       class="navbar-toggler"
       type="button"
@@ -11,11 +12,12 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <h1>
+    <h1 id="headTitle">
       <router-link to="/" class="navbar-brand"
         >Digital Trygghet för Seniorer
       </router-link>
     </h1>
+  </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav" style="color: Black" font-weight="500">
         <li class="nav-item">
