@@ -3,7 +3,7 @@
                   så jag kollade upp hur man använder det och bestämde mig för att göra på detta sättet istället. Känns smidigare. Har inte testat bootstrap
                   så mycket än så skall skapa ett separat dokument på datorn så jag kan se hur det ser ut och style'a så det ser rätt ut då.
                   Majoriteten av koden skriven 02-20-2024 //Jonathan-->
-  <div class="container">
+  <div class="container_secview">
     <div id="conOne">
       <b-card id="cardOne">
         <img
@@ -80,9 +80,13 @@ export default {
 
 <style>
 @media screen and (max-width: 768px) {
-  .container {
+  .container_secview {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   #conOne {
