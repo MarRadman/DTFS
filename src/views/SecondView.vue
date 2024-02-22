@@ -96,7 +96,7 @@ export default {
 <style>
 
 @media screen and (max-width: 768px) {
-  .container {
+  .container_secview {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
