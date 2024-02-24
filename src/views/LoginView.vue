@@ -1,7 +1,7 @@
 <template>
-  
+
   <h1>Test Formulär </h1>
-  
+
   <div v-if="!switchForm" class="form">
    <h2>LOGIN</h2>
    <form>
@@ -9,24 +9,25 @@
        <label for="username">USERNAME</label>
        <input type="text"  required>
       </div>
-  
+
       <div class="form-container">
       <label for="password">PASSWORD</label>
       <input type="text"  required>
       </div>
       
+
       <Router-link to="/">
       <button @click="login" class="login-btn">LOGIN</button>
       </Router-link> <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
-  
+
    </form>
-  
+
   </div>
-  
+
   <!--CREATE ACCOUNT ska endast dyka upp när använder trycker på 'Register'-->
   <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska användaren skickas tillbaka till LOGIN-->
-  
+
   <div v-if="switchForm" class="form">
       <h2>CREATE ACCOUNT</h2>
       <form @submit="submitForm">
@@ -34,7 +35,7 @@
               <label for="username">CHOOSE A USERNAME</label>
               <input type="text"  v-model="username" required>
           </div>
-  
+
           <div class="form-container">
               <label for="password">CHOOSE A PASSWORD</label>
               <input type="text" v-model="password" required>
@@ -43,14 +44,14 @@
               <label for="password">TYPE PASSWORD AGAIN</label>
               <input type="text" v-model="confirmPassword" required>
           </div>
-  
+
           <div class="terms">
               <input id="check" type="checkbox" v-model="terms">
               <p>ACCEPT TERMS</p>
           </div>
-          
+
           <button class="login-btn" >SIGN UP</button>
-  
+
           <div v-if="showErrorMessage" class="error-message">
             <p>* You need to type in 10 letters in Username</p>
             <p>* You need to type in 10 letters in Password</p>
@@ -58,18 +59,18 @@
             <p>* And you also need to fill in the checkbox to confirm the terms</p>
             <button @click="hideBtn">GOT IT</button>
           </div>
-  
+
       </form>
   </div>
-  
+
   </template>
-  
+
   <script>
-  
+
    export default{
-  
+
       data(){
-          return{    // Dessa variabler ska sedan användas som villkor i formuläret. 
+          return{    // Dessa variabler ska sedan användas som villkor i formuläret.
               username: "",
               password: "",
               confirmPassword: "",
@@ -78,15 +79,15 @@
               showErrorMessage: false,
           }
       },
-  
+
       computed: {    // Jag sätter olika villkor för vad använder måste fylla i för att formuläret ska vara godkänt.
         lowerCase() {
-          return /[a-z]/.test(this.password) 
+          return /[a-z]/.test(this.password)
         },
         upperCase(){
-          return /[A-Z]/.test(this.password) 
+          return /[A-Z]/.test(this.password)
         },
-        
+
         isFormValid() {
           if(this.username.length >= 10 &&
           this.password.length >= 10 &&
@@ -98,52 +99,52 @@
           }else{
             return false;
           }
-  
+
         }
       },
-  
-      methods: { // Jag vill att när man uppfyllt alla krav och trycker på Sign Up knappen, ska man gå tillbaka till Login. 
+
+      methods: { // Jag vill att när man uppfyllt alla krav och trycker på Sign Up knappen, ska man gå tillbaka till Login.
                 // Samt tömma fälten så inte all text ligger kvar.
         submitForm(){
           if(this.isFormValid){
             console.log('Det går att registrera.', this.isFormValid)
             alert('Registerar konto...')
-  
+
             setTimeout(()=> {
               this.switchForm = false;
-            
+
               this.username = "",
               this.password = "",
               this.terms = false,
               this.confirmPassword = ""
-              
+
             },3000)
-            
+
           }else{
-            this.showErrorMessage = true 
+            this.showErrorMessage = true
             this.username = "";
             this.password = "";
             this.confirmPassword = "";
-            this.terms = false; 
+            this.terms = false;
           }
-   
+
         },
-        hideBtn(){  // Enda som händer här är att när man trycker på knappen så försvinner 
+        hideBtn(){  // Enda som händer här är att när man trycker på knappen så försvinner
           this.showErrorMessage = false;
         }
-  
-        
+
+
         // Skapa en timeout på typ 1.5 sekund, för att låta användaren hinna reagera vad det är som händer när man trycker på registera. Vill inte få det uppkastat direkt på sig.
         // Kanske en animation för att få en smooth övergång.
       }
   }
-  
+
   </script>
-  
+
   <style>
-  
+
   .form{
-  
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -161,7 +162,7 @@
   }
   label{
       text-align: center;
-      color: #aaa;    
+      color: #aaa;
       display: inline-block;
       margin: 20px 0 10px;
       font-size: 1rem;
@@ -181,20 +182,20 @@
       margin-top: 10px;
       transition: background-color 0.3s ease;
   }
-  
+
   .login-btn:hover{
     background-color: green;
   }
-  
+
   input{
       background-color: seashell;
       color: black;
       display: block;
       padding: 5px 3px;
       width: 100%;
-      
+
   }
-  
+
   .register{
       margin-top: 40px;
   }
@@ -203,16 +204,16 @@
     color: green;
     font-style: italic;
     margin-left: 10px;
-    
+
   }
-  
+
   .terms{
       display: flex;
       justify-content: space-between;
   }
-  
+
   .terms p {
-   
+
       margin-left: 20px;
       margin-top: 5px;
       padding-top: 5px;
@@ -227,7 +228,7 @@
   .btn-red{
     background-color: yellow;
   }
-  
+
   .error-message{
     max-width: 300px;
     padding: 20px;
@@ -239,5 +240,3 @@
   }
 
   </style>
-
-  
