@@ -81,7 +81,7 @@
       },
       methods: { 
        
-        register() { // Har gjort om allting, kört bara via funktion i methods. 
+      register() { // Har gjort om allting, kört bara via funktion i methods. 
                      // Nu ska showMessage dyka upp när användaren inte uppfyller kraven. Uppfyller man så skickas man tillbaka till Login efter 3 sekunder.
       
       let lowerCase = /[a-z]/.test(this.password);
