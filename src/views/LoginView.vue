@@ -28,21 +28,21 @@
   <!--CREATE ACCOUNT ska endast dyka upp när använder trycker på 'Register'-->
   <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska användaren skickas tillbaka till LOGIN-->
 
-  <div v-if="switchForm" class="form">
+  <div v-if="switchForm" @submit.prevent="register" class="form">
       <h2>CREATE ACCOUNT</h2>
       <form @submit="submitForm">
           <div class="form-container">
               <label for="username">CHOOSE A USERNAME</label>
-              <input type="text"  v-model="username" required>
+              <input type="text"  v-model="username">
           </div>
 
           <div class="form-container">
               <label for="password">CHOOSE A PASSWORD</label>
-              <input type="text" v-model="password" required>
+              <input type="text" v-model="password">
           </div>
           <div class="form-container">
               <label for="password">TYPE PASSWORD AGAIN</label>
-              <input type="text" v-model="confirmPassword" required>
+              <input type="text" v-model="confirmPassword">
           </div>
 
           <div class="terms">
@@ -79,63 +79,32 @@
               showErrorMessage: false,
           }
       },
+      methods: { 
+       
+        register() { // Har gjort om allting, kört bara via funktion i methods. 
+                     // Nu ska showMessage dyka upp när användaren inte uppfyller kraven. Uppfyller man så skickas man tillbaka till Login efter 3 sekunder.
+      
+      let lowerCase = /[a-z]/.test(this.password);
+      let upperCase = /[A-Z]/.test(this.password);
 
-      computed: {    // Jag sätter olika villkor för vad använder måste fylla i för att formuläret ska vara godkänt.
-        lowerCase() {
-          return /[a-z]/.test(this.password)
-        },
-        upperCase(){
-          return /[A-Z]/.test(this.password)
-        },
+      console.log("Username:", this.username + "Password:", this.password + "Confirm Password:", this.confirmPassword + " Terms:", this.terms + " Liten bokstav: ", lowerCase);
 
-        isFormValid() {
-          if(this.username.length >= 10 &&
-          this.password.length >= 10 &&
-          this.lowerCase &&
-          this.upperCase &&
-          this.terms &&
-          this.password === this.confirmPassword){
-            return true;
-          }else{
-            return false;
-          }
-
+      if (!(this.username.length >=8)  || !(this.password.length >=8)  || !lowerCase || !upperCase || !(this.terms) || !(this.password === this.confirmPassword)) {
+        this.showErrorMessage = true;
+      } else {
+        alert('Registrerar...')
+        setTimeout(() => {
+          this.switchForm = false;
+        }, 3000);
         }
       },
 
-      methods: { // Jag vill att när man uppfyllt alla krav och trycker på Sign Up knappen, ska man gå tillbaka till Login.
-                // Samt tömma fälten så inte all text ligger kvar.
-        submitForm(){
-          if(this.isFormValid){
-            console.log('Det går att registrera.', this.isFormValid)
-            alert('Registerar konto...')
+      hideBtn() {
+      this.showErrorMessage = false;
+    }
+        
+        
 
-            setTimeout(()=> {
-              this.switchForm = false;
-
-              this.username = "",
-              this.password = "",
-              this.terms = false,
-              this.confirmPassword = ""
-
-            },3000)
-
-          }else{
-            this.showErrorMessage = true
-            this.username = "";
-            this.password = "";
-            this.confirmPassword = "";
-            this.terms = false;
-          }
-
-        },
-        hideBtn(){  // Enda som händer här är att när man trycker på knappen så försvinner
-          this.showErrorMessage = false;
-        }
-
-
-        // Skapa en timeout på typ 1.5 sekund, för att låta användaren hinna reagera vad det är som händer när man trycker på registera. Vill inte få det uppkastat direkt på sig.
-        // Kanske en animation för att få en smooth övergång.
       }
   }
 
@@ -222,11 +191,10 @@
       max-width: 15px;
       height: auto;
   }
-  .btn-green{
-    background-color: green;
-  }
-  .btn-red{
-    background-color: yellow;
+  
+  .error-message p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
   }
 
   .error-message{
@@ -238,5 +206,26 @@
     margin-top: 20px;
     text-align: center;
   }
+  
+  .error-message button{
+    color: #ff055d;
+    padding: 0.8rem 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    box-shadow: 7px 3px 1px rgb(86, 82, 82);
+  }
 
+  .error-message button:hover{
+    background-color: #dcd6d8;
+    border-color: #ff055d;
+  }
   </style>
