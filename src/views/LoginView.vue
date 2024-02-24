@@ -1,22 +1,20 @@
 <template>
 
-  <h1>Test Formulär </h1>
-
   <div v-if="!switchForm" class="form">
    <h2>LOGIN</h2>
    <form>
       <div class="form-container">
        <label for="username">USERNAME</label>
-       <input type="text"  required>
+       <input type="text" v-model="username"  required>
       </div>
 
       <div class="form-container">
       <label for="password">PASSWORD</label>
-      <input type="text"  required>
+      <input type="text" v-model="password" required>
       </div>
       
 
-      <Router-link to="/">
+       <Router-link to="/">
       <button @click="login" class="login-btn">LOGIN</button>
       </Router-link> <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
@@ -54,8 +52,8 @@
 
           <div v-if="showErrorMessage" class="error-message">
             <p>* You need to type in 10 letters in Username</p>
-            <p>* You need to type in 10 letters in Password</p>
-            <p>* In upper and lowercase</p>
+            <p>* You need to type in 10 letters in Password <br>
+             In upper and lowercase</p>
             <p>* And you also need to fill in the checkbox to confirm the terms</p>
             <button @click="hideBtn">GOT IT</button>
           </div>
@@ -92,19 +90,40 @@
       if (!(this.username.length >=8)  || !(this.password.length >=8)  || !lowerCase || !upperCase || !(this.terms) || !(this.password === this.confirmPassword)) {
         this.showErrorMessage = true;
       } else {
+
+        localStorage.setItem("username", this.username)
+        localStorage.setItem("password", this.password)
+        console.log('Username & password sparas: ', this.username , this.password)
+
         alert('Registrerar...')
         setTimeout(() => {
           this.switchForm = false;
+          this.username = "",
+          this.password = ""
         }, 3000);
         }
       },
 
       hideBtn() {
       this.showErrorMessage = false;
-    }
-        
-        
+    },
+    login(){
+      const storedUsername = String(localStorage.getItem("username"))
+      const storedPassword = String(localStorage.getItem("password"))
 
+      console.log('Sparat användarnamn: ', storedUsername)
+      console.log('Sparat lösenord: ', storedPassword)
+      console.log('Ange användarnamn: ', this.username , "Ange lösenord: ", this.password)
+
+      if(this.username === storedUsername && this.password === storedPassword){
+        alert('Inloggning lyckades!')
+        setTimeout(()=>{
+          this.$router.push({ path: '/' })
+        }, 2000)
+      }else{
+        alert('Fel användarnamn eller lösenord!')
+      }
+    }
       }
   }
 
