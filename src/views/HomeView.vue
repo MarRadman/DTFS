@@ -3,7 +3,7 @@
   <div class="d-flex flex-column flex-md-row">
     <b-card class="mr-md-2 mb-md-0 mb-2">
       <router-link to="SecView">
-        <img src="../assets/Andriod.jpg" alt="android" style="max-width: 20rem" class="mb-2" />
+        <img src="../assets/Andriod.jpg" alt="android" style="width: 200px; height: 200px;" class="mb-2" />
         <span style="
             position: absolute;
             bottom: 0;
@@ -19,7 +19,7 @@
     </b-card>
     <b-card class="mr-md-2 mb-md-0 mb-2">
       <router-link to="Mac">
-      <img src="../assets/macbook.jpg" alt="Mac" style="max-width: 20rem" class="mb-2" />
+      <img src="../assets/macbook.jpg" alt="Mac" style="width: 200px; height: 200px;" class="mb-2" />
       <span style="
           position: absolute;
           bottom: 0;
@@ -35,7 +35,7 @@
     </b-card>
     <b-card>
       <router-link to="Windows">
-      <img src="../assets/Windows2.jpg" alt="Windows" style="max-width: 20rem" class="mb-2" />
+      <img src="../assets/Windows2.jpg" alt="Windows" style="width: 200px; height: 200px;" class="mb-2" />
       <span style="
           position: absolute;
           bottom: 0;
