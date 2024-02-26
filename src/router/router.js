@@ -38,6 +38,14 @@ const routes = [
     path: "/learning",
     component: Learning,
   },
+  {
+    path: "/mac",
+    component: Mac,
+  },
+  {
+    path: "/win",
+    component: Windows
+  },
 ];
 
 const router = createRouter({
