@@ -9,7 +9,7 @@
       id="cardOne" class="cards">
     <img
       style="max-width: 15rem; max-height: 10rem;"
-      src="../assets/Andriod.jpg"
+      src="/src/assets/Andriod.jpg"
       alt="Android">
       <b-card-text>
         <h1>Step by Step</h1>
@@ -27,7 +27,7 @@
       id="cardTwo" class="cards">
     <img
       style="max-width: 15rem; max-height: 10rem;"
-      src="../assets/Quiz.jpg"
+      src="/src/assets/Quiz.jpg"
       alt="Quiz" />
       <b-card-text>
         <h1>Quiz</h1>
@@ -46,7 +46,7 @@
       id="cardThree" class="cards">
     <img
       style="max-width: 15rem; max-height: 10rem;"
-      src="../assets/Community.jpg"
+      src="/src/assets/Community.jpg"
       alt="Community">
       <b-card-text>
         <h1>Community</h1>

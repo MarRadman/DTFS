@@ -1,6 +1,6 @@
 <template>
           <!--bara mall för hur man kan göra-->
-
+<!--
           <div>
             <div>
               <h4>Navigate youre way through your phone</h4>
@@ -53,6 +53,7 @@
       </div>
     </div>
     <router-link to="/android" @click="scrollToTop">Back to Android Guides</router-link>
+    -->
 </template>
 
 <script>
