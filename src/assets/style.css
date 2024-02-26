@@ -22,8 +22,8 @@ body {
 
 /* Inne i App.vue för att få views en bit ifrån nav&footer----*/
 .views {
-  margin-top: 20%;
-  margin-bottom: 20%;
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 
 /* Navmenu inställningar */
