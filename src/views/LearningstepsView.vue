@@ -3,7 +3,7 @@
 
           <div>
             <div>
-              <h4>Navigate youre way through youre phone</h4>
+              <h4>Navigate youre way through your phone</h4>
               <b-card-group deck>
                 <b-card>
                   <img src="../assets/meny1.jpg" img-alt="Menu" img-top style="max-width: 100%; height: auto;" />
