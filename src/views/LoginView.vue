@@ -14,8 +14,10 @@
       <label for="password">PASSWORD</label>
       <input type="password" v-model="password" required>
       </div>
-  
-      <button @click="login" class="login-btn">LOGIN</button> <!--Denna knapp ska ta oss till HomeView.-->
+      
+      <router-link to="/">
+      <button @click="login" class="login-btn">LOGIN</button> 
+      </router-link><!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">NEW HERE?  <a href="#" @click="switchForm = true; " class="register-link"><strong>REGISTER</strong></a></p>
   
       <div v-if="loginError" class="error-message">
