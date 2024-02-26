@@ -1,132 +1,165 @@
 <template>
-
+  
+  <h1>Test Formulär </h1>
+  
   <div v-if="!switchForm" class="form">
    <h2>LOGIN</h2>
    <form>
       <div class="form-container">
        <label for="username">USERNAME</label>
-       <input type="text" v-model="username"  required>
+       <input type="text" v-model="username" required>
       </div>
-
+  
       <div class="form-container">
       <label for="password">PASSWORD</label>
-      <input type="text" v-model="password" required>
+      <input type="password" v-model="password" required>
+      </div>
+  
+      <button @click="login" class="login-btn">LOGIN</button> <!--Denna knapp ska ta oss till HomeView.-->
+      <p class="register">NEW HERE?  <a href="#" @click="switchForm = true; " class="register-link"><strong>REGISTER</strong></a></p>
+  
+      <div v-if="loginError" class="error-message">
+        <p>You must type Username and Password correct.</p>
+        <p>Please type in again.</p>
+        <button @click="hideBtn">GOT IT</button>
       </div>
       
-
-       <Router-link to="/">
-      <button @click="login" class="login-btn">LOGIN</button>
-      </Router-link> <!--Denna knapp ska ta oss till HomeView.-->
-      <p class="register">NEW HERE?  <a href="#" @click="switchForm = true" class="register-link"><strong>REGISTER</strong></a></p>
-
    </form>
-
+  
   </div>
-
+  
   <!--CREATE ACCOUNT ska endast dyka upp när använder trycker på 'Register'-->
   <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska användaren skickas tillbaka till LOGIN-->
-
+  
   <div v-if="switchForm" @submit.prevent="register" class="form">
       <h2>CREATE ACCOUNT</h2>
       <form @submit="submitForm">
           <div class="form-container">
               <label for="username">CHOOSE A USERNAME</label>
-              <input type="text"  v-model="username">
+              <input type="text"  v-model="username" >
           </div>
-
+  
           <div class="form-container">
               <label for="password">CHOOSE A PASSWORD</label>
-              <input type="text" v-model="password">
+              <input type="text"  v-model="password" >
           </div>
           <div class="form-container">
               <label for="password">TYPE PASSWORD AGAIN</label>
-              <input type="text" v-model="confirmPassword">
+              <input type="text"  v-model="confirmPassword" >
           </div>
-
+  
           <div class="terms">
               <input id="check" type="checkbox" v-model="terms">
               <p>ACCEPT TERMS</p>
           </div>
-
+          
           <button class="login-btn" >SIGN UP</button>
-
+  
           <div v-if="showErrorMessage" class="error-message">
             <p>* You need to type in 10 letters in Username</p>
             <p>* You need to type in 10 letters in Password <br>
-             In upper and lowercase</p>
+            In Upper and Lowercase</p>
+            
             <p>* And you also need to fill in the checkbox to confirm the terms</p>
             <button @click="hideBtn">GOT IT</button>
           </div>
-
+          
+          <div v-if="createAcc" class="create-acc">
+            <p>Please wait...</p>
+          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          </div>
+          
       </form>
   </div>
-
+  
   </template>
-
+  
   <script>
-
+  
    export default{
-
+  
       data(){
-          return{    // Dessa variabler ska sedan användas som villkor i formuläret.
+          return{    // Dessa variabler ska sedan användas som villkor i formuläret. 
               username: "",
               password: "",
               confirmPassword: "",
               terms: false,
               switchForm: false,
               showErrorMessage: false,
+              loginError: false,
+              createAcc: false,
           }
       },
-      methods: { 
-       
-      register() { // Har gjort om allting, kört bara via funktion i methods. 
-                     // Nu ska showMessage dyka upp när användaren inte uppfyller kraven. Uppfyller man så skickas man tillbaka till Login efter 3 sekunder.
-      
-      let lowerCase = /[a-z]/.test(this.password);
-      let upperCase = /[A-Z]/.test(this.password);
-
-      console.log("Username:", this.username + "Password:", this.password + "Confirm Password:", this.confirmPassword + " Terms:", this.terms + " Liten bokstav: ", lowerCase);
-
-      if (!(this.username.length >=8)  || !(this.password.length >=8)  || !lowerCase || !upperCase || !(this.terms) || !(this.password === this.confirmPassword)) {
-        this.showErrorMessage = true;
-      } else {
-
-        localStorage.setItem("username", this.username)
-        localStorage.setItem("password", this.password)
-        console.log('Username & password sparas: ', this.username , this.password)
-
-        alert('Registrerar...')
-        setTimeout(() => {
-          this.switchForm = false;
-          this.username = "",
-          this.password = ""
-        }, 3000);
+  
+  
+  
+      methods: {
+         // Har gjort om så allting ligger i funktion via methods. Istället kommer det nu vara möjligt att kunna skriva in fel eller inget alls och trycker man då på Sign up, så får man felmeddelandet.
+        register() {
+        
+        let lowerCase = /[a-z]/.test(this.password);
+        let upperCase = /[A-Z]/.test(this.password);
+  
+        console.log("Username:", this.username + "Password:", this.password + "Confirm Password:", this.confirmPassword + " Terms:", this.terms + " Liten bokstav: ", lowerCase, upperCase);
+  
+        if (!(this.username.length >= 10) || !(this.password.length >= 10) || !lowerCase || !upperCase || !(this.terms) || !(this.password === this.confirmPassword)) {
+          this.showErrorMessage = true;
+        } else {
+          
+          localStorage.setItem("username", this.username)
+          localStorage.setItem("password", this.password)
+  
+          console.log('Username & password sparas: ', this.username , this.password)
+  
+          this.createAcc = true;
+          setTimeout(() => {
+            this.switchForm = false,
+            this.createAcc = false
+            this.username = "",
+            this.password = "",
+            this.confirmPassword = "",
+            this.terms = false
+          }, 3000);
+          }
+        },
+  
+        hideBtn() {
+          
+        this.showErrorMessage = false;
+        this.loginError = false;
+  
+        if(!this.switchForm){
+         this.username = "",
+         this.password = "",
+         this.confirmPassword = ""
+        }
+    
+   
+      },
+      login(){
+        
+        if(!this.username && !this.password){
+          return;
+        }
+        const storedUsername = String(localStorage.getItem("username"))
+        const storedPassword = String(localStorage.getItem("password"))
+  
+        console.log('Sparat användarnamn:', storedUsername)
+        console.log('Sparat lösenord: ', storedPassword)
+        
+       if(this.username === storedUsername && this.password === storedPassword){
+          alert('Inloggningen lyckades!')
+        
+        }else{
+          this.loginError = true;
+   
         }
       },
-
-      hideBtn() {
-      this.showErrorMessage = false;
-    },
-    login(){
-      const storedUsername = String(localStorage.getItem("username"))
-      const storedPassword = String(localStorage.getItem("password"))
-
-      console.log('Sparat användarnamn: ', storedUsername)
-      console.log('Sparat lösenord: ', storedPassword)
-      console.log('Ange användarnamn: ', this.username , "Ange lösenord: ", this.password)
-
-      if(this.username === storedUsername && this.password === storedPassword){
-        alert('Inloggning lyckades!')
-        setTimeout(()=>{
-          this.$router.push({ path: '/' })
-        }, 2000)
-      }else{
-        alert('Fel användarnamn eller lösenord!')
-      }
-    }
+      
+     
       }
   }
-
+  
   </script>
 
   <style>
@@ -247,4 +280,65 @@
     background-color: #dcd6d8;
     border-color: #ff055d;
   }
+  .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.create-acc{
+  margin-top: 25px;
+}
+.create-acc p {
+  font-size: 1.3rem;
+}
   </style>
