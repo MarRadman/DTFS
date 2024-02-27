@@ -9,6 +9,7 @@ import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
 import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
 import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
+import Calender from "../views/Android/Stepbystep/CalenderView.vue"
 
 const routes = [
   {
@@ -51,6 +52,10 @@ const routes = [
     path: "/Guide",
     component: Guide
   },
+  {
+    path: "/Calender",
+    component: Calender
+  }
 ];
 
 const router = createRouter({
