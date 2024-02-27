@@ -9,6 +9,7 @@ import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
 import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
 import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
+import StartupProblem from "../views/Android/Stepbystep/StartupProblemsView.vue";
 
 const routes = [
   {
@@ -45,11 +46,15 @@ const routes = [
   },
   {
     path: "/win",
-    component: Windows
+    component: Windows,
   },
   {
     path: "/Guide",
-    component: Guide
+    component: Guide,
+  },
+  {
+    path: "/StartupProblem",
+    component: StartupProblem,
   },
 ];
 
