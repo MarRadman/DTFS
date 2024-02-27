@@ -49,6 +49,7 @@
     </b-card>
   </div>
 </div>
+<router-link to="/android" @click="scrollToTop">Back to Android Guides</router-link>
 </template>
 
 <script>

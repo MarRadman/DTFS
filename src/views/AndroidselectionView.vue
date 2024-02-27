@@ -25,7 +25,7 @@ export default {
         return {
             Images: [
                 { path: "src/assets/learning.jpg", description: "Navigate on youre screen", link: "/learning" },
-                { path: "src/assets/help 2.jpg", description: "Description 2", link: "/help" },
+                { path: "src/assets/help 2.jpg", description: "Description 2", link: "/Guide" },
                 { path: "src/assets/help 3.jpg", description: "Description 3", link: "/help" },
                 { path: "src/assets/help 4.jpg", description: "Description 4", link: "/help" },
                 { path: "src/assets/help 5.jpg", description: "Description 5", link: "/help" },

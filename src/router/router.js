@@ -8,6 +8,7 @@ import Android from "../views/AndroidselectionView.vue";
 import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
 import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
+import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
 
 const routes = [
   {
@@ -45,6 +46,10 @@ const routes = [
   {
     path: "/win",
     component: Windows
+  },
+  {
+    path: "/Guide",
+    component: Guide
   },
 ];
 
