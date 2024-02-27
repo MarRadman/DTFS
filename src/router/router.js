@@ -9,7 +9,11 @@ import About from "../views/AboutView.vue";
 import Member from "../views/MemberView.vue";
 import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
 import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
+<<<<<<< HEAD
 import StartupProblem from "../views/Android/Stepbystep/StartupProblemsView.vue";
+=======
+import Calender from "../views/Android/Stepbystep/CalenderView.vue"
+>>>>>>> 9eed9e32fb0c28534d7aa80261bf24c33ed9506f
 
 const routes = [
   {
@@ -56,6 +60,10 @@ const routes = [
     path: "/StartupProblem",
     component: StartupProblem,
   },
+  {
+    path: "/Calender",
+    component: Calender
+  }
 ];
 
 const router = createRouter({
