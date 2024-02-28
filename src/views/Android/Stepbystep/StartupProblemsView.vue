@@ -152,23 +152,9 @@
       </b-card>
     </b-card-group>
   </div>
-  <button
-  type="button"
-  @click="hasHistory()
-    ? $router.go(-1)
-    : $router.push('/')" class="my-5 btn btn-outline-success">
-  Back
-</button>
 </template>
 
 <script>
-export default {
-  methods: {
-    hasHistory () {
-      return window.history.length > 2
-    }
-  }
-};
 </script>
 
 <style scoped>
