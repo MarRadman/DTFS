@@ -152,19 +152,22 @@
       </b-card>
     </b-card-group>
   </div>
-  <router-link to="/android" @click="scrollToTop"
-    >Back to Android Guides</router-link
-  >
+  <button
+  type="button"
+  @click="hasHistory()
+    ? $router.go(-1)
+    : $router.push('/')" class="my-5 btn btn-outline-success">
+  Back
+</button>
 </template>
 
 <script>
 export default {
-  // Detta är för komma längst upp på sidan man router- linka till.
-  thods: {
-    scrollToTop() {
-      window.scrollTo(0, 0); // Scrolla till (x, y) = (0, 0)
-    },
-  },
+  methods: {
+    hasHistory () {
+      return window.history.length > 2
+    }
+  }
 };
 </script>
 
