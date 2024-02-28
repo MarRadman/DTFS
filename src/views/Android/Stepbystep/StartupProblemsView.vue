@@ -15,7 +15,6 @@
           en fungerande strömkälla och låt den ladda i några minuter innan du
           försöker starta den igen.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
       <!-- 2 card -->
       <b-card
@@ -29,7 +28,6 @@
           Vänta sedan några sekunder och tryck på strömknappen igen för att
           starta om enheten.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
     </b-card-group>
     <b-card-group deck>
@@ -50,7 +48,6 @@
           på enheten, så det är viktigt att göra detta endast som en sista
           utväg.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
       <!-- 4 card -->
       <b-card
@@ -64,14 +61,13 @@
           en dator med hjälp av en USB-kabel och försöka utföra en återställning
           genom tillverkarens programvara eller Android SDK.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
     </b-card-group>
     <b-card-group deck>
       <!-- 5 card -->
       <b-card
         title="Kontrollera hårdvaruproblem"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/Hardware.gif"
         img-alt="Image"
         img-top
       >
@@ -80,12 +76,11 @@
           telefonens hårdvara. Detta kan kräva att du tar med enheten till en
           auktoriserad serviceverkstad för att få den reparerad eller utbytt.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
       <!-- 6 card -->
       <b-card
         title="Testa med en annan laddare/kabel"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/BadCharger.gif"
         img-alt="Image"
         img-top
       >
@@ -94,14 +89,13 @@
           enheten själv. Försök att använda en annan laddare och USB-kabel för
           att se om det löser problemet.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
     </b-card-group>
     <b-card-group deck>
       <!-- 7 card -->
       <b-card
         title="Kontrollera för fysiska skador"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/PhoneDamaged.gif"
         img-alt="Image"
         img-top
       >
@@ -110,12 +104,11 @@
           sprickor i skärmen eller vattenskador. Om det finns några synliga
           skador kan det vara orsaken till varför telefonen inte startar.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
       <!-- 8 card -->
       <b-card
         title="Ta bort minneskortet och SIM-kortet"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/RemoveSim.gif"
         img-alt="Image"
         img-top
       >
@@ -123,14 +116,13 @@
           Ta bort minneskortet och SIM-kortet från enheten och försök sedan
           starta om den. Ibland kan problem med dessa kort orsaka startproblem.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
     </b-card-group>
     <b-card-group deck>
       <!-- 9 card -->
       <b-card
         title="Kontrollera för mjukvaruproblem"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/SoftwareProblem.gif"
         img-alt="Image"
         img-top
       >
@@ -143,12 +135,11 @@
           försöka avinstallera nyligen installerade appar eller genomföra en
           fabriksåterställning för att åtgärda problemet.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
       <!-- 10 card -->
       <b-card
         title="Kontakta tillverkarens support/återsäljare"
-        img-src="https://picsum.photos/300/300/?image=41"
+        img-src="./src/assets/StartupProblemPhotos/CustomerService.gif"
         img-alt="Image"
         img-top
       >
@@ -158,7 +149,6 @@
           vägledning. De kan kunna erbjuda specifik support eller instruktioner
           baserat på din enhets modell och garantistatus.
         </b-card-text>
-        <template #footer> </template>
       </b-card>
     </b-card-group>
   </div>
