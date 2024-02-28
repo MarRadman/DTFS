@@ -48,9 +48,9 @@ export default {
           link: "/StartupProblem",
         },
         {
-          path: "src/assets/help 4.jpg",
-          description: "Description 4",
-          link: "/help",
+          path: "src/assets/camera.jpg",
+          description: "Use your phone camera like a pro",
+          link: "/ProCamera",
         },
         {
           path: "src/assets/help 5.jpg",

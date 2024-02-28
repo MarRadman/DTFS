@@ -11,6 +11,7 @@ import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
 import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
 import StartupProblem from "../views/Android/Stepbystep/StartupProblemsView.vue";
 import Calender from "../views/Android/Stepbystep/CalenderView.vue"
+import ProCamera from "../views/Android/Stepbystep/ProCameraView.vue";
 
 const routes = [
   {
@@ -60,6 +61,10 @@ const routes = [
   {
     path: "/Calender",
     component: Calender
+  },
+  {
+    path: "/ProCamera",
+    component: ProCamera
   }
 ];
 
