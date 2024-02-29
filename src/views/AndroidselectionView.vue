@@ -54,8 +54,8 @@ export default {
         },
         {
           path: "src/assets/help 5.jpg",
-          description: "Description 5",
-          link: "/help",
+          description: "Download an app through the Play Store",
+          link: "/downloadapp", //Tillagt //Jonte
         },
         {
           path: "src/assets/help 6.jpg",
