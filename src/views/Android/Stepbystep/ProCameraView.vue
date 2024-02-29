@@ -7,7 +7,7 @@
 
         <h1>lorem ipsum dolor</h1>
         <div>
-            <img class="img" src="../../../assets/procam1.webp " alt="pro">
+            <img class="img" src="../../../assets/ProCam/procam1.webp" alt="pro">
         </div>
 
         <p class="p">
@@ -16,7 +16,7 @@
         </p>
         <h1>lorem ipsum dolor</h1>
         <div>
-            <img class="img" src="../../../assets/lightroom-mobile-editing-app.jpg" alt="lightroom">
+            <img class="img" src="../../../assets/ProCam/lightroom-mobile-editing-app.jpg" alt="lightroom">
         </div>
         
 
@@ -26,7 +26,7 @@
 
         <h1> Lorem ipsum dolor </h1>
         <div>
-            <img class="img" src="../../../assets/editing-app.webp" alt="editing">
+            <img class="img" src="../../../assets/ProCam/editing-app.webp" alt="editing">
         </div>
         <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis vitae nostrum pariatur assumenda error quo quam quae doloremque, debitis unde reprehenderit facere perspiciatis obcaecati vel totam atque ut. Suscipit.</p>
     </div>
