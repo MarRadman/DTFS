@@ -115,8 +115,10 @@
         </div>
         <p class="p">
             <li>
-                <ul>Snapseed:</ul>
-                <ul></ul>
+                <ul>Snapseed</ul>
+                <ul>Adobe</ul>
+                <ul>maginfy</ul>
+                <ul>audio editor (cool effect using math)</ul>
             </li>
         </p>
     </div>
