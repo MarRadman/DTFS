@@ -62,38 +62,38 @@ export default{
               [
                 {title: 'Steg 1',
                  description: 'Öppna kalender: För att börja använda kalender, öppna den genom att klicka på kalenderapp på din enheter.', 
-                 image: "../Stepbystep/Android/views/src/assets/CalenderPics/View.jpg" },
+                 image: "./src/assets/CalenderPics/View.jpg" },
 
                 {title: 'Steg 2',
                  description: 'Se månadsvyn: När kalendern är öppen kommer du se månadsvyn. Det är en översikt över den aktuella månaden med datum markerade.',
-                  image: "../Stepbystep/Android/views/src/assets/CalenderPics/Currentmonth.jpg"}
+                  image: "./src/assets/CalenderPics/Currentmonth.jpg"}
               ],
               [
                 {title: 'Steg 3',
                  description: 'Navigera genom månaderna: För att se tidigare eller kommande månader, använda navigeringsknapparna eller svep åt vänster eller höger på skärmen beroende på din enhet.', 
-                 image: "../Stepbystep/Android/views/src/assets/CalenderPics/Swipemonth.jpg"},
+                 image: "./src/assets/CalenderPics/Swipemonth.jpg"},
 
                 {title: 'Steg 4', 
                 description: 'Visa år, månad, vecka, dag: Kalendern visar vanligtvis aktuellt år och månad. För att visa specifika detaljer som veckodag eller enskild dag, klicka på det relevanta datumet.', 
-                image: "../Stepbystep/Android/views/src/assets/CalenderPics/View.jpg"}
+                image: "./src/assets/CalenderPics/View.jpg"}
               ],
               [
                 {title: 'Steg 5', 
                 description: 'Skapa en händelse: För att lägga till en händelse i kalendern, klicka på knappen "Skapa händelse" eller liknande, och fyll i informationen som du vill.', 
-                image: "../Stepbystep/Android/views/src/assets/CalenderPics/Createevent.jpg"},
+                image: "./src/assets/CalenderPics/Createevent.jpg"},
 
                 {title: 'Steg 6', 
                 description: 'Visa påminnelse: När du skapar en händelse, har du möjlighet att ställa in påminnelse. Kalender kommer ge dig att meddelande när det är dags för händelse genom en påminnelse, via notifikation.', 
-                image: "../Stepbystep/Android/views/src/assets/CalenderPics/Setreminder.jpg"}
+                image: "./src/assets/CalenderPics/Setreminder.jpg"}
               ],
               [
                 {title: 'Steg 7',
                  description: 'Redigera eller ta bort: För att redigera eller ta bort händelse. Tryck på "pennan" och "papperskorg" längst ner i din händelse.', 
-                 image: "../Stepbystep/Android/views/src/assets/CalenderPics/Editdel.jpg"},
+                 image: "./src/assets/CalenderPics/Editdel.jpg"},
                  
                 {title: 'Steg 8', 
                 description: 'Stäng ner: För att enkelt stänga ner kalenderappen, tryck på hemknappen på din enhet.', 
-                image: "../Stepbystep/Android/views/src/assets/CalenderPics/Returntoview.jpg"} 
+                image: "./src/assets/CalenderPics/Returntoview.jpg"} 
               ]
             ]
       }
@@ -105,17 +105,18 @@ export default{
 <style scoped>
 .card-image{
   width: 250px;
-  min-height: 500px;
+  height: auto;
   border-radius: 10px;
 }
 
 .container {
    display: flex;
    flex-direction: column;
+   
    align-items: center;
    text-align: center;
    background-color: #8ca388; /* Bakgrundsfärg */
-   padding: 10px;
+   
    margin: 10px;
    border-radius: 10px;
   }
