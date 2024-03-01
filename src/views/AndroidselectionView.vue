@@ -59,8 +59,8 @@ export default {
         },
         {
           path: "src/assets/help 6.jpg",
-          description: "Description 6",
-          link: "/help",
+          description: "Calender step by step",
+          link: "/Calender",
         },
         {
           path: "src/assets/help 7.jpg",
