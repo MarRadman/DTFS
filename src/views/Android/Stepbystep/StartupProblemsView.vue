@@ -2,8 +2,16 @@
   <!--Martin-->
   <div id="startupProblemView">
     <h1>10 steg för att felsöka en Android-mobil som inte startar</h1>
-    <!-- 1 card -->
     <b-card-group deck>
+      <b-card v-for="card in cards" :key="card.title">
+        <b-card-title >{{ card.title }}</b-card-title>
+        <b-card-img :src="card.imgSrc" :alt="card.imgAlt"></b-card-img>
+        <b-card-text>{{ card.text }}</b-card-text>
+      </b-card>
+    </b-card-group>
+</div>
+    <!-- 1 card -->
+    <!-- <b-card-group deck>
       <b-card
         title="Kontrollera strömmen"
         img-src="./src/assets/StartupProblemPhotos/BatteryDrain.gif"
@@ -13,11 +21,11 @@
         <b-card-text>
           Se till att din telefon har tillräckligt med batteri. Anslut den till
           en fungerande strömkälla och låt den ladda i några minuter innan du
-          försöker starta den igen.
-        </b-card-text>
-      </b-card>
+          försöker starta den igen. -->
+        <!-- </b-card-text>
+      </b-card> -->
       <!-- 2 card -->
-      <b-card
+      <!-- <b-card
         title="Starta om enheten"
         img-src="./src/assets/StartupProblemPhotos/RestartPhone.gif"
         img-alt="Restart Phone"
@@ -28,11 +36,11 @@
           Vänta sedan några sekunder och tryck på strömknappen igen för att
           starta om enheten.
         </b-card-text>
-      </b-card>
-    </b-card-group>
-    <b-card-group deck>
+      </b-card> -->
+    <!-- </b-card-group>
+    <b-card-group deck> -->
       <!-- 3 card -->
-      <b-card
+      <!-- <b-card
         title="Försök en hård återställning"
         img-src="./src/assets/StartupProblemPhotos/HardReset.gif"
         img-alt="Hard rest your phone"
@@ -48,9 +56,9 @@
           på enheten, så det är viktigt att göra detta endast som en sista
           utväg.
         </b-card-text>
-      </b-card>
+      </b-card> -->
       <!-- 4 card -->
-      <b-card
+      <!-- <b-card
         title="Anslut till en dator och återställ"
         img-src="./src/assets/StartupProblemPhotos/ConnectPhone.gif"
         img-alt="Connect phone to computer"
@@ -61,11 +69,11 @@
           en dator med hjälp av en USB-kabel och försöka utföra en återställning
           genom tillverkarens programvara eller Android SDK.
         </b-card-text>
-      </b-card>
-    </b-card-group>
-    <b-card-group deck>
+      </b-card> -->
+    <!-- </b-card-group>
+    <b-card-group deck> -->
       <!-- 5 card -->
-      <b-card
+      <!-- <b-card
         title="Kontrollera hårdvaruproblem"
         img-src="./src/assets/StartupProblemPhotos/Hardware.gif"
         img-alt="Image"
@@ -76,9 +84,9 @@
           telefonens hårdvara. Detta kan kräva att du tar med enheten till en
           auktoriserad serviceverkstad för att få den reparerad eller utbytt.
         </b-card-text>
-      </b-card>
+      </b-card> -->
       <!-- 6 card -->
-      <b-card
+      <!-- <b-card
         title="Testa med en annan laddare/kabel"
         img-src="./src/assets/StartupProblemPhotos/BadCharger.gif"
         img-alt="Image"
@@ -89,11 +97,11 @@
           enheten själv. Försök att använda en annan laddare och USB-kabel för
           att se om det löser problemet.
         </b-card-text>
-      </b-card>
-    </b-card-group>
-    <b-card-group deck>
+      </b-card> -->
+    <!-- </b-card-group>
+    <b-card-group deck> -->
       <!-- 7 card -->
-      <b-card
+      <!-- <b-card
         title="Kontrollera för fysiska skador"
         img-src="./src/assets/StartupProblemPhotos/PhoneDamaged.gif"
         img-alt="Image"
@@ -104,9 +112,9 @@
           sprickor i skärmen eller vattenskador. Om det finns några synliga
           skador kan det vara orsaken till varför telefonen inte startar.
         </b-card-text>
-      </b-card>
+      </b-card> -->
       <!-- 8 card -->
-      <b-card
+      <!-- <b-card
         title="Ta bort minneskortet och SIM-kortet"
         img-src="./src/assets/StartupProblemPhotos/RemoveSim.gif"
         img-alt="Image"
@@ -117,10 +125,10 @@
           starta om den. Ibland kan problem med dessa kort orsaka startproblem.
         </b-card-text>
       </b-card>
-    </b-card-group>
-    <b-card-group deck>
+    </b-card-group> -->
+    <!-- <b-card-group deck> -->
       <!-- 9 card -->
-      <b-card
+      <!-- <b-card
         title="Kontrollera för mjukvaruproblem"
         img-src="./src/assets/StartupProblemPhotos/SoftwareProblem.gif"
         img-alt="Image"
@@ -131,13 +139,13 @@
           på en viss skärm, kan det finnas ett mjukvaruproblem. Du kan försöka
           starta enheten i säkert läge genom att hålla ned strömknappen och
           välja "Säkert läge" när alternativet visas. Om telefonen startar
-          normalt i säkert läge kan problemet vara med en tredjepartsapp. Du kan
-          försöka avinstallera nyligen installerade appar eller genomföra en
-          fabriksåterställning för att åtgärda problemet.
-        </b-card-text>
-      </b-card>
+          normalt i säkert läge kan problemet vara med en tredjepartsapp. Du kan -->
+          <!-- försöka avinstallera nyligen installerade appar eller genomföra en
+          fabriksåterställning för att åtgärda problemet. -->
+        <!-- </b-card-text>
+      </b-card> -->
       <!-- 10 card -->
-      <b-card
+      <!-- <b-card
         title="Kontakta tillverkarens support/återsäljare"
         img-src="./src/assets/StartupProblemPhotos/CustomerService.gif"
         img-alt="Image"
@@ -148,13 +156,37 @@
           kontakta tillverkarens kundsupport för ytterligare hjälp och
           vägledning. De kan kunna erbjuda specifik support eller instruktioner
           baserat på din enhets modell och garantistatus.
-        </b-card-text>
-      </b-card>
-    </b-card-group>
-  </div>
+        </b-card-text> -->
+      <!-- </b-card>
+    </b-card-group> -->
 </template>
 
 <script>
+import axios from 'axios';
+
+export default {
+
+  data() {
+    return {
+      cards: []
+    }
+  },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      axios.get('./src/views/Android/Stepbystep/data/cardData.json')
+      .then(response => {
+      this.cards = response.data.cards;
+      })
+      .catch(error => {
+        console.log ('Fel vid hämtningen av data:', error);
+      });
+     }
+  }
+}
+
 </script>
 
 <style scoped>
