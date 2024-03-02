@@ -9,7 +9,7 @@
         <b-card-text>{{ card.text }}</b-card-text>
       </b-card>
     </b-card-group>
-</div>
+  </div>
     <!-- 1 card -->
     <!-- <b-card-group deck>
       <b-card
