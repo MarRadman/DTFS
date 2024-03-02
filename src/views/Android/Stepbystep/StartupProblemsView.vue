@@ -2,14 +2,77 @@
   <!--Martin-->
   <div id="startupProblemView">
     <h1>10 steg för att felsöka en Android-mobil som inte startar</h1>
-    <b-card-group deck>
-      <b-card v-for="card in cards" :key="card.title">
-        <b-card-title >{{ card.title }}</b-card-title>
-        <b-card-img :src="card.imgSrc" :alt="card.imgAlt"></b-card-img>
+    <b-card-group deck class="cardContainer">
+      <b-card v-for="card in cards" :key="card.id" :title="card.title" :img-src="card.imgSrc" :img-alt="card.imgAlt" class="card">
         <b-card-text>{{ card.text }}</b-card-text>
       </b-card>
     </b-card-group>
   </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+
+  data() {
+    return {
+      cards: []
+    }
+  },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      axios.get('./src/views/Android/Stepbystep/data/cardData.json')
+      .then(response => {
+      this.cards = response.data.cards;
+      })
+      .catch(error => {
+        console.log ('Fel vid hämtningen av data:', error);
+      });
+     }
+  }
+}
+
+</script>
+
+<style scoped>
+
+.router-link {
+  margin-top: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: stretch;
+  justify-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+    object-fit: cover;
+  }
+}
+</style>
+
+
+ <!-- Gamla strukturen och hårdkodad template -->
+
     <!-- 1 card -->
     <!-- <b-card-group deck>
       <b-card
@@ -159,48 +222,3 @@
         </b-card-text> -->
       <!-- </b-card>
     </b-card-group> -->
-</template>
-
-<script>
-import axios from 'axios';
-
-export default {
-
-  data() {
-    return {
-      cards: []
-    }
-  },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    fetchData() {
-      axios.get('./src/views/Android/Stepbystep/data/cardData.json')
-      .then(response => {
-      this.cards = response.data.cards;
-      })
-      .catch(error => {
-        console.log ('Fel vid hämtningen av data:', error);
-      });
-     }
-  }
-}
-
-</script>
-
-<style scoped>
-/* Ändra storleken på bilder */
-#startupProblemView {
-  max-width: 80%;
-  margin: 0 auto; /* Centrera horisontellt */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrera innehållet vertikalt */
-}
-
-/* Centrera router-länken */
-.router-link {
-  margin-top: 20px; /* Justera önskat avstånd från kanten */
-}
-</style>
