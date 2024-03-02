@@ -12,11 +12,11 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <h1 id="headTitle">
-      <router-link to="/" class="navbar-brand"
-        >Digital Trygghet för Seniorer
-      </router-link>
-    </h1>
+    <router-link to="/" class="navbar-brand mx-auto">
+      <h1 id="headTitle">
+        Digital Trygghet för Seniorer
+      </h1>
+    </router-link>
   </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav" style="color: Black" font-weight="500">
