@@ -28,7 +28,7 @@
         <p>You must type Username and Password correct.</p>
         <p>Please type in again.</p>
         <button @click="hideBtn">GOT IT</button>
-      </div>
+    </div>
     </form>
   </div>
 
@@ -95,6 +95,7 @@ export default {
       switchForm: false,
       showErrorMessage: false,
       loginError: false,
+      attemptedLogin: false,
       createAcc: false,
       loginAccess: true,
     };
@@ -147,13 +148,16 @@ export default {
     },
 
     hideBtn() {
-      this.showErrorMessage = false;
-      this.loginError = false;
-
-      if (!this.switchForm) {
-        (this.username = ""), (this.password = ""), (this.confirmPassword = "");
-      }
-    },
+    // Fördröj att sätta loginError till false så att felmeddelandet syns längre
+    setTimeout(() => {
+        this.loginError = false;
+    }, 3000); // 3 sekunders fördröjning innan felmeddelandet försvinner
+    if (!this.switchForm) {
+        this.username = "";
+        this.password = "";
+        this.confirmPassword = "";
+    }
+},
     login() {
       if (!this.username && !this.password) {
         return;
@@ -171,8 +175,13 @@ export default {
         alert("Inloggningen lyckades!");
         this.loginAccess = false;
         this.$router.push("/");
+        this.attemptedLogin = false;
+        this.loginError = false;
       } else {
-        this.loginError = true;
+        if (!this.attemptedLogin) { // Kontrollera om användaren har försökt logga in tidigare
+          this.loginError = true; // Sätt loginError till true om inloggningen misslyckas för första gången
+          this.attemptedLogin = true;
+        }
       }
     },
   },
