@@ -1,0 +1,46 @@
+{
+  "cards": [
+      {
+          "id": 10,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "När du slår på telefonen eller trycker på hemknappen kommer du till startskärmen. Det är där du hittar alla dina appar och widgets. För att komma tillbaka till startskärmen när du är i en annan app, tryck på hemknappen."
+      },
+      {
+          "id": 11,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "Längst ned på skärmen, vanligtvis i en rad, hittar du navigeringsknapparna. Dessa kan vara ikoner som en pil tillbaka, en cirkel för hem och en fyrkant för att visa öppna appar. Du kan använda dessa knappar för att navigera mellan appar och gå tillbaka till startskärmen."
+      },
+      {
+          "id": 12,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "Öppna din telefon genom att trycka på strömbrytaren (oftast på höger sida eller ovansidan av telefonen). På startskärmen, leta efter en ikon som ser ut som en fyrkant med punkter inuti. Detta är 'Appar' -appen. Tryck på 'Appar' -appen för att öppna den. Här hittar du alla installerade appar på din telefon. Du kan svepa upp eller ner för att bläddra bland dem."
+      },
+      {
+          "id": 13,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "Gå till startskärmen genom att trycka på hemknappen (oftast en cirkel längst ned på skärmen). Letar efter ikonen som ser ut som ett kugghjul eller säger 'Inställningar'. Detta kan också finnas i snabbmenyn genom att svepa ner från toppen av skärmen och trycka på kugghjulsikonen. Tryck på 'Inställningar' -ikonen för att öppna inställningsmenyn. Här kan du justera olika inställningar för din telefon."
+      },
+      {
+          "id": 14,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "Tryck och håll på en tom plats på startskärmen tills en meny visas. Välj 'Bakgrund' eller 'Bakgrundsbild' från menyn. Välj en bild från galleriet eller från förinställda bakgrundsbilder. När du har valt din bild, tryck på 'Använd som bakgrund' eller liknande för att ställa in den som din bakgrundsbild."
+      },
+      {
+          "id": 15,
+          "title": "Startskärmen",
+          "imgSrc": "/src/assets/En bild till lycka/Skärm.jpg",
+          "imgAlt": "image",
+          "text": "Om du får ett meddelande visas en notis längst upp på skärmen. Du kan även få en varning på låsskärmen. Dra ner från toppen av skärmen för att öppna meddelandefältet och se alla dina meddelanden. Tryck på ett meddelande för att öppna det och läsa det. Du kan svara genom att trycka på svarsalternativet."
+      }
+  ]
+}

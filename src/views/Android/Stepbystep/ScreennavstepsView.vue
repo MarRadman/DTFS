@@ -1,6 +1,91 @@
 <template>
-  <h4>Navigera dig runt i din telefon</h4>
-<div>
+  <div id="Navigate">
+    <h4>Navigera dig runt i din telefon</h4>
+    <div class="card-container">
+      <b-card v-for="card in cards" :key="card.id" :title="card.title" :img-src="card.imgSrc" :img-alt="card.imgAlt" class="card">
+        <b-card-text>{{ card.text }}</b-card-text>
+      </b-card>
+    </div>
+    <div class="search-container">
+      <input type="text" v-model="searchTerm" placeholder="Sök efter ord i texten">
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      cards: [],
+      searchTerm: ''
+    }
+  },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      axios.get('/src/views/Android/Stepbystep/data/cardDavid.json')
+        .then(response => {
+          this.cards = response.data.cards;
+        })
+        .catch(error => {
+          console.log('Fel vid hämtningen av data:', error);
+        });
+    },
+    handleSearch() {
+      // Här hade man kunnat söka om det funnits något :)
+    }
+  },
+  watch: {
+    searchTerm: {
+      handler: 'handleSearch',
+      immediate: true
+    }
+  }
+}
+</script>
+
+<style>
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px; 
+}
+
+.b-card {
+  width: 100%; 
+  border-width: 5px;
+  background-color: #afa;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.b-card:hover {
+  transform: scale(1.1);
+}
+
+.b-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-container {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+</style>
+
+
+
+ <!--Sparad template
   <b-card-group>
     <b-card title="Startskärmen" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
       <b-card-text>
@@ -69,55 +154,4 @@
         <small class="text-muted">1. Här visas nya meddelanden 2.Här hittar du alla meddelanden</small>
       </template>
     </b-card>
-  </b-card-group>
-  </div>
-  <div class="search-container">
-      <input type="text" v-model="searchTerm" placeholder="Sök efter ord i texten">
-    </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      searchTerm: ''
-    }
-  },
-  methods: {
-    handleSearch() {
-    }
-  },
-  watch: {
-    searchTerm: {
-      handler: 'handleSearch', 
-      immediate: true 
-    }
-  }
-}
-</script>
-
-<style>
-.b-card-group {
-  background-color: #B4E94B;
-}
-
-.b-card {
-  border-width: 5px;
-  background-color: #afa;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.b-card:hover {
-  transform: scale(1.1);
-}
-
-.b-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.search-container {
-  margin-top: 20px;
-}
-</style>
+  </b-card-group>-->
