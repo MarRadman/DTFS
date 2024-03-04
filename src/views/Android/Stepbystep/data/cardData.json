@@ -1,0 +1,74 @@
+{
+  "cards": [
+    {
+      "id": 0,
+      "title": "Kontrollera strömmen",
+      "imgSrc": "./src/assets/StartupProblemPhotos/BatteryDrain.gif",
+      "imgAlt": "Battery check",
+      "text": "Se till att din telefon har tillräckligt med batteri. Anslut den till en fungerande strömkälla och låt den ladda i några minuter innan du försöker starta den igen."
+    },
+    {
+      "id": 1,
+      "title": "Starta om enheten",
+      "imgSrc": "./src/assets/StartupProblemPhotos/RestartPhone.gif",
+      "imgAlt": "Restart Phone",
+      "text": "Håll ned strömknappen i några sekunder tills telefonen stängs av helt. Vänta sedan några sekunder och tryck på strömknappen igen för att starta om enheten"
+    },
+    {
+      "id": 2,
+      "title": "Försök en hård återställning",
+      "imgSrc": "./src/assets/StartupProblemPhotos/HardReset.gif",
+      "imgAlt": "Hard rest your phone",
+      "text": "Ibland kan en hård återställning lösa problemet. Processen för hård återställning varierar beroende på tillverkare och modell. Vanligtvis innebär det att hålla ned en kombination av knappar (till exempel strömknappen och volymnedåtknappen) tills en återställningsmeny visas. Därifrån kan du välja alternativet för att återställa enheten till fabriksinställningarna. Observera att detta kommer att radera all data på enheten, så det är viktigt att göra detta endast som en sista utväg."
+    },
+    {
+      "id": 3,
+      "title": "Anslut till en dator och återställ",
+      "imgSrc": "./src/assets/StartupProblemPhotos/ConnectPhone.gif",
+      "imgAlt": "Connect phone to computer",
+      "text": "Om telefonen fortfarande inte startar kan du försöka ansluta den till en dator med hjälp av en USB-kabel och försöka utföra en återställning genom tillverkarens programvara eller Android SDK."
+    },
+    {
+      "id": 4,
+      "title": "Kontrollera hårdvaruproblem",
+      "imgSrc": "./src/assets/StartupProblemPhotos/Hardware.gif",
+      "imgAlt": "Check hardware problem",
+      "text": "Om inget av ovanstående steg fungerar kan det finnas ett problem med telefonens hårdvara. Detta kan kräva att du tar med enheten till en auktoriserad serviceverkstad för att få den reparerad eller utbytt."
+    },
+    {
+      "id": 5,
+      "title": "Testa med en annan laddare/kabel",
+      "imgSrc": "./src/assets/StartupProblemPhotos/BadCharger.gif",
+      "imgAlt": "Try another charging cable",
+      "text": "Ibland kan problemet vara med laddaren eller USB-kabeln istället för enheten själv. Försök att använda en annan laddare och USB-kabel för att se om det löser problemet."
+    },
+    {
+      "id": 6,
+      "title": "Kontrollera för fysiska skador",
+      "imgSrc": "./src/assets/StartupProblemPhotos/PhoneDamaged.gif",
+      "imgAlt": "Check phone for any damage",
+      "text": "Inspektera telefonen noggrant för eventuella fysiska skador, som sprickor i skärmen eller vattenskador. Om det finns några synliga skador kan det vara orsaken till varför telefonen inte startar."
+    },
+    {
+      "id": 7,
+      "title": "Ta bort minneskortet och SIM-kortet",
+      "imgSrc": "./src/assets/StartupProblemPhotos/RemoveSim.gif",
+      "imgAlt": "Remove the SIM-card & memory card",
+      "text": "Ta bort minneskortet och SIM-kortet från enheten och försök sedan starta om den. Ibland kan problem med dessa kort orsaka startproblem."
+    },
+    {
+      "id": 8,
+      "title": "Kontrollera för mjukvaruproblem",
+      "imgSrc": "./src/assets/StartupProblemPhotos/SoftwareProblem.gif",
+      "imgAlt": "Check for software problem",
+      "text": "Om telefonen har startat upp till viss del men stannar eller fastnar på en viss skärm, kan det finnas ett mjukvaruproblem. Du kan försöka starta enheten i säkert läge genom att hålla ned strömknappen och välja (Säkert läge) när alternativet visas. Om telefonen startar normalt i säkert läge kan problemet vara med en tredjepartsapp. Du kan försöka avinstallera nyligen installerade appar eller genomföra en fabriksåterställning för att åtgärda problemet."
+    },
+    {
+      "id": 9,
+      "title": "Kontakta tillverkarens support/återsäljare",
+      "imgSrc": "./src/assets/StartupProblemPhotos/CustomerService.gif",
+      "imgAlt": "Contact customer service",
+      "text": "Om inget av ovanstående steg löser problemet kan det vara bäst att kontakta tillverkarens kundsupport för ytterligare hjälp och vägledning. De kan kunna erbjuda specifik support eller instruktioner baserat på din enhets modell och garantistatus."
+    }
+  ]
+}

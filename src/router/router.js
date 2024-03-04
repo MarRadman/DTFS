@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/HomeView.vue";
 import Login from "../views/LoginView.vue";
+import Home from "../views/HomeView.vue";
 import SecView from "../views/Android/SecondViewAndroid.vue";
 import Mac from "../views/SecondViewApple.vue";
 import Windows from "../views/SecondViewPC.vue";
@@ -10,18 +10,18 @@ import Member from "../views/MemberView.vue";
 import Learning from "../views/Android/Stepbystep/LearningstepsView.vue";
 import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
 import StartupProblem from "../views/Android/Stepbystep/StartupProblemsView.vue";
-import Calender from "../views/Android/Stepbystep/CalenderView.vue"
+import Calender from "../views/Android/Stepbystep/CalenderView.vue";
 import ProCamera from "../views/Android/Stepbystep/ProCameraView.vue";
-import DownloadView from "../views/Android/Stepbystep/DownloadView.vue"
+import DownloadView from "../views/Android/Stepbystep/DownloadView.vue";
 
 const routes = [
   {
-    path: "/",
-    component: Home,
-  },
-  {
     path: "/login",
     component: Login,
+  },
+  {
+    path: "/",
+    component: Home,
   },
   {
     path: "/secView",
@@ -61,16 +61,16 @@ const routes = [
   },
   {
     path: "/Calender",
-    component: Calender
+    component: Calender,
   },
   {
     path: "/ProCamera",
-    component: ProCamera
+    component: ProCamera,
   },
   {
     path: "/DownloadApp",
-    component: DownloadView
-  }
+    component: DownloadView,
+  },
 ];
 
 const router = createRouter({

@@ -36,14 +36,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: auto;
 }
 
 #headTitle {
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.2rem; /* Ställ in storlek efter behov */
 }
 
 .navbar-toggler {
@@ -86,5 +82,11 @@ slut på Andriod Selection View
   body {
     background-color: black;
     color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #headTitle {
+    font-size: 2rem; /* Ställ in storlek efter behov */
   }
 }
