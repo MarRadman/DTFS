@@ -3,7 +3,7 @@
   <div id="startupProblemView">
     <h1>10 steg för att felsöka en Android-mobil som inte startar</h1>
     <b-card-group deck class="cardContainer">
-      <b-card v-for="card in cards" :key="card.id" :title="card.title" :img-src="card.imgSrc" :img-alt="card.imgAlt" class="card">
+      <b-card v-for="card in cards" :title="card.title" :img-src="card.imgSrc" :img-alt="card.imgAlt" class="card">
         <b-card-text>{{ card.text }}</b-card-text>
       </b-card>
     </b-card-group>
