@@ -1,67 +1,123 @@
 <template>
+  <h4>Navigera dig runt i din telefon</h4>
 <div>
-  <div class="mt-4">
-    <h4>Navigation buttons at the bottom.</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
+  <b-card-group>
+    <b-card title="Startskärmen" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
       <b-card-text>
-        At the bottom of the screen, usually in a row, you'll find the navigation buttons. These can be icons such as a back arrow, a circle for home, and a square to show open apps.
-        You can use these buttons to navigate between apps and return to the home screen.
+        När du slår på telefonen eller trycker på hemknappen kommer du till startskärmen. Det är där du hittar alla dina appar och widgets.
+        För att komma tillbaka till startskärmen när du är i en annan app, tryck på hemknappen.
       </b-card-text>
-      </b-card>
-    <h4>How to find app</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right>
-      <b-card-text>
-        On the home screen, look for an icon that looks like a square with dots inside. This is the "Apps" app.
-        Tap the “Apps” app to open it. Here you will find all installed apps on your phone. You can swipe up or down to scroll through them.
-      </b-card-text>
-      </b-card>
-    <h4>The home screen</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
-      <b-card-text>
-       When you turn on the phone or press the home button, you will be taken to the home screen. It's where you'll find all your apps and widgets.
-       To return to the home screen when you're in another app, tap
-      </b-card-text>
+      <template #footer>
+        <small class="text-muted">1. Där vanligtvis strömbrytaren sitter 2. Meny knapp på telefonen</small>
+      </template>
     </b-card>
-    <h4>How to customize wallpaper on your Android phone</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right>
+
+    <b-card title="Navigeringsknappar längst ner" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
       <b-card-text>
-        Touch and hold an empty space on the home screen until a menu appears.
-        Select "Background" or "Background image" from the menu.
-        Choose an image from the gallery or from preset wallpapers.  
-        Once you've selected your image, tap "Use as wallpaper" or similar to set it as your wallpaper.
+        Längst ned på skärmen, vanligtvis i en rad, hittar du navigeringsknapparna. Dessa kan vara ikoner som en pil tillbaka, en cirkel för hem och en fyrkant för att visa öppna appar.
+        Du kan använda dessa knappar för att navigera mellan appar och gå tillbaka till startskärmen.
       </b-card-text>
+      <template #footer>
+        <small class="text-muted">1.Tillbaka 2. Hem 3. Hanterare</small>
+      </template>
     </b-card>
-    <h4>Messages</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right>
+
+    <b-card title="Hur man hittar appar" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
       <b-card-text>
-        If you receive a message, a notice will appear at the top of the screen. You can also get a warning on the lock screen.
-        Swipe down from the top of the screen to open the notification bar and see all your messages.
-        Tap a message to open it and read it. You can reply by pressing the reply option.
+        Öppna din telefon genom att trycka på strömbrytaren (oftast på höger sida eller ovansidan av telefonen).
+        På startskärmen, leta efter en ikon som ser ut som en fyrkant med punkter inuti. Detta är "Appar" -appen.
+        Tryck på "Appar" -appen för att öppna den. Här hittar du alla installerade appar på din telefon. Du kan svepa upp eller ner för att bläddra bland dem.
       </b-card-text>
+      <template #footer>
+        <small class="text-muted">1.Knapp för appar</small>
+      </template>
     </b-card>
-    <h4>The camera</h4>
-    <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-3">
-      <b-card-text>
-        On the home screen, look for an icon that looks like a camera.
-        Tap the camera icon to open the camera app.
-        Now you can point and tap the screen to take a picture. There are also other settings and effects you can explore.
-      </b-card-text>
-    </b-card>
-  </div>
+  </b-card-group>
 </div>
-<router-link to="/android" @click="scrollToTop">Back to Android Guides</router-link>
+<div>
+  <b-card-group>
+    <b-card title="Visa inställningar" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
+      <b-card-text>
+        Gå till startskärmen genom att trycka på hemknappen (oftast en cirkel längst ned på skärmen).
+        Letar efter ikonen som ser ut som ett kugghjul eller säger "Inställningar". Detta kan också finnas i snabbmenyn genom att svepa ner från toppen av skärmen och trycka på kugghjulsikonen.
+        Tryck på "Inställningar" -ikonen för att öppna inställningsmenyn. Här kan du justera olika inställningar för din telefon.
+      </b-card-text>
+      <template #footer>
+        <small class="text-muted">1. tryck på meny-knappen 2.Kugghjulet</small>
+      </template>
+    </b-card>
+
+    <b-card title="Hur man anpassar bakgrund på sin Android-telefon" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
+      <b-card-text>
+        Tryck och håll på en tom plats på startskärmen tills en meny visas.
+        Välj "Bakgrund" eller "Bakgrundsbild" från menyn.
+        Välj en bild från galleriet eller från förinställda bakgrundsbilder.
+        När du har valt din bild, tryck på "Använd som bakgrund" eller liknande för att ställa in den som din bakgrundsbild.
+      </b-card-text>
+      <template #footer>
+        <small class="text-muted">1. Håll in på utmärkt cirkel</small>
+      </template>
+    </b-card>
+
+    <b-card title="Meddelanden" img-src="/src/assets/En bild till lycka/Skärm.jpg" img-alt="Image" img-top>
+      <b-card-text>
+        Om du får ett meddelande visas en notis längst upp på skärmen. Du kan även få en varning på låsskärmen.
+        Dra ner från toppen av skärmen för att öppna meddelandefältet och se alla dina meddelanden.
+        Tryck på ett meddelande för att öppna det och läsa det. Du kan svara genom att trycka på svarsalternativet.
+      </b-card-text>
+      <template #footer>
+        <small class="text-muted">1. Här visas nya meddelanden 2.Här hittar du alla meddelanden</small>
+      </template>
+    </b-card>
+  </b-card-group>
+  </div>
+  <div class="search-container">
+      <input type="text" v-model="searchTerm" placeholder="Sök efter ord i texten">
+    </div>
 </template>
 
 <script>
 export default {
-// Detta är för komma längst upp på sidan man router- linka till.
-thods: {
-scrollToTop() {
-window.scrollTo(0, 0) // Scrolla till (x, y) = (0, 0)
-},
-},
+  data() {
+    return {
+      searchTerm: ''
+    }
+  },
+  methods: {
+    handleSearch() {
+    }
+  },
+  watch: {
+    searchTerm: {
+      handler: 'handleSearch', 
+      immediate: true 
+    }
+  }
 }
 </script>
-<style>
 
+<style>
+.b-card-group {
+  background-color: #B4E94B;
+}
+
+.b-card {
+  border-width: 5px;
+  background-color: #afa;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.b-card:hover {
+  transform: scale(1.1);
+}
+
+.b-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-container {
+  margin-top: 20px;
+}
 </style>

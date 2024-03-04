@@ -12,6 +12,7 @@ import NavMenu from "./components/NavMenuComponent.vue";
 import Footer from "./components/FooterComponent.vue";
 import BackButton from "./components/BackButtonComponent.vue";
 
+
 export default {
   name: "App",
   components: {
