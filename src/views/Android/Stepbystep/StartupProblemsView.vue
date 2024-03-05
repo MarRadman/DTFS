@@ -3,7 +3,13 @@
   <div id="startupProblemView">
     <h1>10 steg för att felsöka en Android-mobil som inte startar</h1>
     <b-card-group deck class="cardContainer">
-      <b-card v-for="card in cards" :title="card.title" :img-src="card.imgSrc" :img-alt="card.imgAlt" class="card">
+      <b-card
+        v-for="card in cards"
+        :title="card.title"
+        :img-src="card.imgSrc"
+        :img-alt="card.imgAlt"
+        class="card"
+      >
         <b-card-text>{{ card.text }}</b-card-text>
       </b-card>
     </b-card-group>
@@ -11,35 +17,33 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
-
   data() {
     return {
-      cards: []
-    }
+      cards: [],
+    };
   },
   mounted() {
     this.fetchData();
   },
   methods: {
     fetchData() {
-      axios.get('./src/views/Android/Stepbystep/data/cardData.json')
-      .then(response => {
-      this.cards = response.data.cards;
-      })
-      .catch(error => {
-        console.log ('Fel vid hämtningen av data:', error);
-      });
-     }
-  }
-}
-
+      axios
+        .get("./data/cardData.json")
+        .then((response) => {
+          this.cards = response.data.cards;
+        })
+        .catch((error) => {
+          console.log("Fel vid hämtningen av data:", error);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 .router-link {
   margin-top: 20px;
 }
@@ -58,7 +62,6 @@ export default {
 }
 
 @media only screen and (min-width: 768px) {
-
   .cardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -70,11 +73,10 @@ export default {
 }
 </style>
 
+<!-- Gamla strukturen och hårdkodad template -->
 
- <!-- Gamla strukturen och hårdkodad template -->
-
-    <!-- 1 card -->
-    <!-- <b-card-group deck>
+<!-- 1 card -->
+<!-- <b-card-group deck>
       <b-card
         title="Kontrollera strömmen"
         img-src="./src/assets/StartupProblemPhotos/BatteryDrain.gif"
@@ -85,10 +87,10 @@ export default {
           Se till att din telefon har tillräckligt med batteri. Anslut den till
           en fungerande strömkälla och låt den ladda i några minuter innan du
           försöker starta den igen. -->
-        <!-- </b-card-text>
+<!-- </b-card-text>
       </b-card> -->
-      <!-- 2 card -->
-      <!-- <b-card
+<!-- 2 card -->
+<!-- <b-card
         title="Starta om enheten"
         img-src="./src/assets/StartupProblemPhotos/RestartPhone.gif"
         img-alt="Restart Phone"
@@ -100,10 +102,10 @@ export default {
           starta om enheten.
         </b-card-text>
       </b-card> -->
-    <!-- </b-card-group>
+<!-- </b-card-group>
     <b-card-group deck> -->
-      <!-- 3 card -->
-      <!-- <b-card
+<!-- 3 card -->
+<!-- <b-card
         title="Försök en hård återställning"
         img-src="./src/assets/StartupProblemPhotos/HardReset.gif"
         img-alt="Hard rest your phone"
@@ -120,8 +122,8 @@ export default {
           utväg.
         </b-card-text>
       </b-card> -->
-      <!-- 4 card -->
-      <!-- <b-card
+<!-- 4 card -->
+<!-- <b-card
         title="Anslut till en dator och återställ"
         img-src="./src/assets/StartupProblemPhotos/ConnectPhone.gif"
         img-alt="Connect phone to computer"
@@ -133,10 +135,10 @@ export default {
           genom tillverkarens programvara eller Android SDK.
         </b-card-text>
       </b-card> -->
-    <!-- </b-card-group>
+<!-- </b-card-group>
     <b-card-group deck> -->
-      <!-- 5 card -->
-      <!-- <b-card
+<!-- 5 card -->
+<!-- <b-card
         title="Kontrollera hårdvaruproblem"
         img-src="./src/assets/StartupProblemPhotos/Hardware.gif"
         img-alt="Image"
@@ -148,8 +150,8 @@ export default {
           auktoriserad serviceverkstad för att få den reparerad eller utbytt.
         </b-card-text>
       </b-card> -->
-      <!-- 6 card -->
-      <!-- <b-card
+<!-- 6 card -->
+<!-- <b-card
         title="Testa med en annan laddare/kabel"
         img-src="./src/assets/StartupProblemPhotos/BadCharger.gif"
         img-alt="Image"
@@ -161,10 +163,10 @@ export default {
           att se om det löser problemet.
         </b-card-text>
       </b-card> -->
-    <!-- </b-card-group>
+<!-- </b-card-group>
     <b-card-group deck> -->
-      <!-- 7 card -->
-      <!-- <b-card
+<!-- 7 card -->
+<!-- <b-card
         title="Kontrollera för fysiska skador"
         img-src="./src/assets/StartupProblemPhotos/PhoneDamaged.gif"
         img-alt="Image"
@@ -176,8 +178,8 @@ export default {
           skador kan det vara orsaken till varför telefonen inte startar.
         </b-card-text>
       </b-card> -->
-      <!-- 8 card -->
-      <!-- <b-card
+<!-- 8 card -->
+<!-- <b-card
         title="Ta bort minneskortet och SIM-kortet"
         img-src="./src/assets/StartupProblemPhotos/RemoveSim.gif"
         img-alt="Image"
@@ -189,9 +191,9 @@ export default {
         </b-card-text>
       </b-card>
     </b-card-group> -->
-    <!-- <b-card-group deck> -->
-      <!-- 9 card -->
-      <!-- <b-card
+<!-- <b-card-group deck> -->
+<!-- 9 card -->
+<!-- <b-card
         title="Kontrollera för mjukvaruproblem"
         img-src="./src/assets/StartupProblemPhotos/SoftwareProblem.gif"
         img-alt="Image"
@@ -203,12 +205,12 @@ export default {
           starta enheten i säkert läge genom att hålla ned strömknappen och
           välja "Säkert läge" när alternativet visas. Om telefonen startar
           normalt i säkert läge kan problemet vara med en tredjepartsapp. Du kan -->
-          <!-- försöka avinstallera nyligen installerade appar eller genomföra en
+<!-- försöka avinstallera nyligen installerade appar eller genomföra en
           fabriksåterställning för att åtgärda problemet. -->
-        <!-- </b-card-text>
+<!-- </b-card-text>
       </b-card> -->
-      <!-- 10 card -->
-      <!-- <b-card
+<!-- 10 card -->
+<!-- <b-card
         title="Kontakta tillverkarens support/återsäljare"
         img-src="./src/assets/StartupProblemPhotos/CustomerService.gif"
         img-alt="Image"
@@ -220,5 +222,5 @@ export default {
           vägledning. De kan kunna erbjuda specifik support eller instruktioner
           baserat på din enhets modell och garantistatus.
         </b-card-text> -->
-      <!-- </b-card>
+<!-- </b-card>
     </b-card-group> -->
