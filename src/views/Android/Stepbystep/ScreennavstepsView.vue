@@ -27,9 +27,9 @@ export default {
   },
   methods: {
     fetchData() {
-      axios.get('/src/views/Android/Stepbystep/data/cardDavid.json')
-        .then(response => {
-          this.cards = response.data.cards;
+      axios.get('./data/cardDavid.json')
+        .then(({ data }) => {
+          this.cards = data.cards;
         })
         .catch(error => {
           console.log('Fel vid hämtningen av data:', error);
