@@ -33,12 +33,12 @@ export default {
     return {
       Images: [
         {
-          path: "src/assets/help 2.jpg",
+          path: "src/assets/navigate.jpg",
           description: "Navigate youre android",
           link: "/Guide",
         },
         {
-          path: "src/assets/help 3.jpg",
+          path: "src/assets/StartupProblem.jpg",
           description: "Your Android dont startup?",
           link: "/StartupProblem",
         },
@@ -48,7 +48,7 @@ export default {
           link: "/ProCamera",
         },
         {
-          path: "src/assets/help 5.jpg",
+          path: "src/assets/downloadapp.jpg",
           description: "Download an app through the Play Store",
           link: "/downloadapp", //Tillagt //Jonte
         },
@@ -88,6 +88,21 @@ export default {
 </script>
 
 <style scoped>
+
+#search{
+  width: 100%;
+  background-color: #B4CA7C;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+  border-style:groove;
+
+}
+
+  div{
+    margin: 10px;
+  }
+
 #scroll-container {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -98,5 +113,14 @@ export default {
 
 #scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 </style>
