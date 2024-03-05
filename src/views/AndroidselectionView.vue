@@ -57,26 +57,6 @@ export default {
           description: "Calender step by step",
           link: "/Calender",
         },
-        {
-          path: "src/assets/help 7.jpg",
-          description: "Description 7",
-          link: "/help",
-        },
-        {
-          path: "src/assets/help 8.jpg",
-          description: "Description 8",
-          link: "/help",
-        },
-        {
-          path: "src/assets/help 9.jpg",
-          description: "Description 9",
-          link: "/help",
-        },
-        {
-          path: "src/assets/help 10.jpg",
-          description: "Description 10",
-          link: "/help",
-        },
         // lägg till mer bilder med information om behövs
       ],
       ImageUrls: {},
