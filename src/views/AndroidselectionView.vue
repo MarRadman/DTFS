@@ -12,8 +12,8 @@
               alt="Image"
               class="mb-2"
               style="
-                height: 20rem;
-                width: 20rem;
+                height: 15rem;
+                width: 15rem;
                 padding: 0;
                 margin: 0;
                 object-fit: cover;
@@ -53,10 +53,11 @@ export default {
           link: "/downloadapp", //Tillagt //Jonte
         },
         {
-          path: "src/assets/help 6.jpg",
+          path: "src/assets/Calender.jpg",
           description: "Calender step by step",
           link: "/Calender",
         },
+
         // lägg till mer bilder med information om behövs
       ],
       ImageUrls: {},
@@ -89,6 +90,7 @@ export default {
 
 <style scoped>
 
+
 #search{
   width: 100%;
   background-color: #B4CA7C;
@@ -116,6 +118,8 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+
+
 
   .filter {
     display: flex;

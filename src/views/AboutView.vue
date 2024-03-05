@@ -69,7 +69,7 @@
         style="max-width: 20rem"
         class="mb-2"
       />
-      <h2>Khalil Hassan</h2>
+      <h2>Khaliil Hassan</h2>
     </b-card>
   </div>
   <div>
