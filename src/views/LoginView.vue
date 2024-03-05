@@ -1,5 +1,5 @@
 <template>
-  <h1>Test Formulär</h1>
+  
 
   <div v-if="!switchForm" class="form">
     <h2>LOGIN</h2>

@@ -33,7 +33,9 @@
     <div class="recension d-flex align-items-center justify-content-center">
       <div class="text-center d-flex flex-column justify-content-between">
         <h2 class="h2text">Lämna gärna en recension</h2>
-        <input type="text" v-model="newReview" class="form-control m-4" placeholder="Skriv din recension här...">
+        <div class="d-flex justify-content-center">
+        <input type="text" v-model="newReview" class="form-control m-4" placeholder="Skriv din recension här...">   
+        </div>
         <p class="ptag2" v-if="feedback">Tack för feedback!</p>
         <b-button variant="success" class="align-self-end mt-5" @click="addReview">Skicka in</b-button>
       </div>
