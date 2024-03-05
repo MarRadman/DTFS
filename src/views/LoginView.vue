@@ -2,32 +2,32 @@
   
 
   <div v-if="!switchForm" class="form">
-    <h2>LOGIN</h2>
+    <h2>LOGGA IN</h2>
     <form>
       <div class="form-container">
-        <label for="username">USERNAME</label>
+        <label for="username">ANVÄNDARNAMN</label>
         <input type="text" v-model="username" required />
       </div>
 
       <div class="form-container">
-        <label for="password">PASSWORD</label>
+        <label for="password">LÖSENORD</label>
         <input type="password" v-model="password" required />
       </div>
 
-      <button @click="login" class="login-btn">LOGIN</button>
+      <button @click="login" class="login-btn">LOGGA IN</button>
 
       <!--Denna knapp ska ta oss till HomeView.-->
       <p class="register">
-        NEW HERE?
+        NY HÄR?
         <a href="#" @click="switchForm = true" class="register-link"
-          ><strong>REGISTER</strong></a
+          ><strong>REGISTRERA</strong></a
         >
       </p>
 
       <div v-if="loginError" class="error-message">
-        <p>You must type Username and Password correct.</p>
-        <p>Please type in again.</p>
-        <button @click="hideBtn">GOT IT</button>
+        <p>Skriv in rätt användarnamn och lösenord.</p>
+        <p>Skriv in igen.</p>
+        <button @click="hideBtn">FÖRSTÅR!</button>
     </div>
     </form>
   </div>
@@ -36,42 +36,42 @@
   <!--När användaren fyllt i sin information och tryckt på SIGN UP. Ska användaren skickas tillbaka till LOGIN-->
 
   <div v-if="switchForm" @submit.prevent="register" class="form">
-    <h2>CREATE ACCOUNT</h2>
+    <h2>SKAPA KONTO</h2>
     <form @submit="submitForm">
       <div class="form-container">
-        <label for="username">CHOOSE A USERNAME</label>
+        <label for="username">VÄLJ ANVÄNDARNAMN</label>
         <input type="text" v-model="username" />
       </div>
 
       <div class="form-container">
-        <label for="password">CHOOSE A PASSWORD</label>
+        <label for="password">VÄLJ LÖSENORD</label>
         <input type="text" v-model="password" />
       </div>
       <div class="form-container">
-        <label for="password">TYPE PASSWORD AGAIN</label>
+        <label for="password">SKRIV IN LÖSENORD IGEN</label>
         <input type="text" v-model="confirmPassword" />
       </div>
 
       <div class="terms">
         <input id="check" type="checkbox" v-model="terms" />
-        <p>ACCEPT TERMS</p>
+        <p>ACCEPTERA KRAV</p>
       </div>
 
-      <button class="login-btn">SIGN UP</button>
+      <button class="login-btn">REGISTERA</button>
 
       <div v-if="showErrorMessage" class="error-message">
-        <p>* You need to type in 10 letters in Username</p>
+        <p>* Du behöver skriva in 10 bokstäver i användarnamn.</p>
         <p>
-          * You need to type in 10 letters in Password <br />
-          In Upper and Lowercase
+          * Du behöver skriva in 10 bokstäver i lösenord. <br />
+          Både stora och små bokstäver.
         </p>
 
-        <p>* And you also need to fill in the checkbox to confirm the terms</p>
-        <button @click="hideBtn">GOT IT</button>
+        <p>* Tryck in checkboxen för att uppfylla kraven.</p>
+        <button @click="hideBtn">FÖRSTÅR!</button>
       </div>
 
       <div v-if="createAcc" class="create-acc">
-        <p>Please wait...</p>
+        <p>Var god vänta...</p>
         <div class="lds-ellipsis">
           <div></div>
           <div></div>
