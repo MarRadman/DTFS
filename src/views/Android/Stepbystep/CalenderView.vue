@@ -18,11 +18,27 @@
   <b-button variant="success" @click="nextGroup" style="margin-left: 10px;" v-show="activeGroup < cardGroups.length -1">Nästa Steg</b-button>
  </div>
 
- <div class="recension" v-if="showReview">
-    <h2>Lämna gärna en recension</h2>
-    <input type="text">
-    <button >Skicka in</button>
-  </div>
+ <b-card class="m-3 border-3 border-success">
+    <div>
+      <h2 class="h2text">Recensioner för denna guide</h2>
+      <ul class="list-group list-group-flush">
+        <li v-for="review in reviews" class="list-group-item py-3">
+          <p class="ptag">{{ review }}</p>
+        </li>
+      </ul>
+    </div>
+  </b-card>
+
+  <b-card class="card-container m-2 border-3 border-success bg-secondary text-white" v-if="showReview" style="min-height: 200px;">
+    <div class="recension d-flex align-items-center justify-content-center">
+      <div class="text-center d-flex flex-column justify-content-between">
+        <h2 class="h2text">Lämna gärna en recension</h2>
+        <input type="text" v-model="newReview" class="form-control m-4" placeholder="Skriv din recension här...">
+        <p class="ptag2" v-if="feedback">Tack för feedback!</p>
+        <b-button variant="success" class="align-self-end mt-5" @click="addReview">Skicka in</b-button>
+      </div>
+    </div>
+  </b-card>
 </div>
 
 
@@ -33,6 +49,20 @@
 
 export default{
    methods:{
+    addReview(){
+        if(this.newReview !== ""){
+          this.reviews.push(this.newReview);
+          this.newReview = "",
+          this.feedback = true
+        setTimeout(() => {
+          this.showReview = false;
+          this.feedback = ""
+        }, 10000)
+        } else{
+          console.log("Kollar att det inte går att skicka ett tomt meddelande")
+          return;
+        }
+      },
     nextGroup(){
         // Skriver -1 , därför att i en array börjar man räkna från 0. Så det 4 finns 4 stycken, så blir det 0.1.2.3. Så genom att subtrahera från man indexet för det sista i elementet i arrayen.
         if(this.activeGroup < this.cardGroups.length - 1){
@@ -57,6 +87,15 @@ export default{
 
    data(){
       return{
+
+         showReview: false,
+         feedback: false,
+         newReview: "",
+         reviews: [
+          'Helt okej',
+          'Vore enklare med rörliga bilder',
+          'Enkel guide att följa'
+         ],
          activeGroup: 0,
             cardGroups: [
               [
@@ -103,23 +142,37 @@ export default{
 </script>
 
 <style scoped>
+
 .card-image{
   width: 250px;
-  height: auto;
+  min-height: 500px;
   border-radius: 10px;
 }
-
 .container {
    display: flex;
    flex-direction: column;
-   
    align-items: center;
    text-align: center;
    background-color: #8ca388; /* Bakgrundsfärg */
-   
+   padding: 10px;
    margin: 10px;
    border-radius: 10px;
   }
+  .h2text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    
+  }
+  .ptag{
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .ptag2{
+    font-size: 1.3rem;
+    font-style: oblique;
+  }
+
   #heading{
     font-size: 2.5rem;
     font-style: italic;
