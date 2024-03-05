@@ -33,11 +33,6 @@ export default {
     return {
       Images: [
         {
-          path: "src/assets/learning.jpg",
-          description: "Navigate on youre screen",
-          link: "/learning",
-        },
-        {
           path: "src/assets/help 2.jpg",
           description: "Navigate youre android",
           link: "/Guide",
