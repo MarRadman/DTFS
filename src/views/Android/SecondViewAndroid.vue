@@ -36,7 +36,7 @@
       </b-card-text>
 
       <b-button id="buttons"
-      router-link to="/android"
+      router-link to="/Quiz"
         >Start</b-button>
     </b-card>
   </div>

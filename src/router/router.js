@@ -12,6 +12,7 @@ import Guide from "../views/Android/Stepbystep/ScreennavstepsView.vue";
 import StartupProblem from "../views/Android/Stepbystep/StartupProblemsView.vue";
 import Calender from "../views/Android/Stepbystep/CalenderView.vue";
 import ProCamera from "../views/Android/Stepbystep/ProCameraView.vue";
+import quiz from "../views/Android/quizShit.vue";
 import DownloadView from "../views/Android/Stepbystep/DownloadView.vue";
 
 const routes = [
@@ -70,6 +71,10 @@ const routes = [
   {
     path: "/DownloadApp",
     component: DownloadView,
+  },
+  {
+    path: "/quiz",
+    component: quiz,
   },
 ];
 
