@@ -27,7 +27,7 @@
         </router-link>
       </b-card>
       <b-card class="mr-md-2 mb-md-0 mb-2 platform">
-        <router-link to="Mac">
+        <router-link to="/Quiz">
           <img
             src="../assets/macbook.jpg"
             alt="Mac"
@@ -52,7 +52,7 @@
         </router-link>
       </b-card>
       <b-card class="platform">
-        <router-link to="Windows">
+        <router-link to="/Quiz">
           <img
             src="../assets/Windows2.jpg"
             alt="Windows"
