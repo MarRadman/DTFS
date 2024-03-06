@@ -35,7 +35,7 @@
             class="nav-link"
             style="color: Black"
             font-weight="500"
-            >Member</router-link
+            >Användare</router-link
           >
         </li>
         <li class="nav-item">
@@ -44,7 +44,7 @@
             class="nav-link"
             style="color: Black"
             font-weight="500"
-            >About</router-link
+            >Om</router-link
           >
         </li>
         <!-- <li class="nav-item dropdown">
