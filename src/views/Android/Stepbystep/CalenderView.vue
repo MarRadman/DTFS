@@ -146,9 +146,15 @@ export default{
 <style scoped>
 
 .card-image{
-  width: 250px;
-  min-height: 500px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
+}
+@media(min-width: 768px){
+  .card-image{
+    width: 250px;
+    min-height: 500px;
+  }
 }
 .container {
    display: flex;
