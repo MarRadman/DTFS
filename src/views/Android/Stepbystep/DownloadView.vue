@@ -73,11 +73,13 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      max-width: 100vh;
     }
 
     .mb-2 {
       margin: 10px;
       min-width: 17rem;
+      max-width: 100vh;
     }
   }
 </style>
