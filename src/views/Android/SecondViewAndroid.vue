@@ -11,7 +11,7 @@
         <b-card-text>
           <h1>Step by Step</h1>
 
-          <p>Your guide of learning basic IT</p>
+          <p>Din guide för enkelt lärande inom IT</p>
         </b-card-text>
         <b-button id="buttons" router-link to="/android">Start</b-button>
       </b-card>
@@ -27,7 +27,7 @@
         <b-card-text>
           <h1>Quiz</h1>
 
-          <p>Test your knowledge in a quiz</p>
+          <p>Testa din kunskap i ett quiz</p>
         </b-card-text>
 
         <b-button id="buttons" router-link to="/Quiz">Start</b-button>
@@ -45,7 +45,7 @@
           <h1>Community</h1>
 
           <p>
-            Join the community with others
+            Joina vårt community
           </p>
         </b-card-text>
 
