@@ -1,7 +1,7 @@
 <template>
   <header>
     <b-card>
-      <h1>ABOUT</h1>
+      <h1>Om</h1>
       <p>
         Välkomna till vår sida om Digital Trygghet för seniorer! Vi är ett
         dedikerat team av entusiaster som brinner för att göra den digitala
@@ -27,7 +27,7 @@
       </p>
     </b-card>
   </header>
-  <h1>CREATORS</h1>
+  <h1>Kreatörerna</h1>
   <div>
     <b-card>
       <img

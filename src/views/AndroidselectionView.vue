@@ -34,27 +34,27 @@ export default {
       Images: [
         {
           path: "src/assets/navigate.jpg",
-          description: "Navigate youre android",
+          description: "Navigera din Android",
           link: "/Guide",
         },
         {
           path: "src/assets/StartupProblem.jpg",
-          description: "Your Android dont startup?",
+          description: "Startar inte din Android?",
           link: "/StartupProblem",
         },
         {
           path: "src/assets/camera.jpg",
-          description: "Use your phone camera like a pro",
+          description: "Använd din kamera som ett pro!",
           link: "/ProCamera",
         },
         {
           path: "src/assets/downloadapp.jpg",
-          description: "Download an app through the Play Store",
+          description: "Ladda ner din app via Play Store",
           link: "/downloadapp", //Tillagt //Jonte
         },
         {
           path: "src/assets/Calender.jpg",
-          description: "Calender step by step",
+          description: "Kalender",
           link: "/Calender",
         },
 

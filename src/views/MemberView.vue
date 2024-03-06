@@ -1,14 +1,14 @@
 <template>
   <div class="form">
-    <h2>MEMBER</h2>
+    <h2>MEDLEM</h2>
     <form>
       <div class="form-container">
-        <label for="username">USERNAME</label>
+        <label for="username">ANVÄNDARE</label>
         <input type="text" required />
       </div>
 
       <div class="form-container">
-        <label for="password">PASSWORD</label>
+        <label for="password">LÖSENORD</label>
         <input type="password" required />
       </div>
     </form>
