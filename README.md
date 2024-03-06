@@ -1,1 +1,1 @@
-[Digital trygghet för seniorer](https://marradman.github.io/DTFS/index.html)
+[Digital trygghet för seniorer](https://marradman.github.io/DTFS/index)
