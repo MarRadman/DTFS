@@ -34,7 +34,7 @@ export default {
       Images: [
         {
           path: "src/assets/navigate.jpg",
-          description: "Navigate youre android",
+          description: "Navigate your android",
           link: "/Guide",
         },
         {
