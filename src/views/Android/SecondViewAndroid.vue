@@ -1,13 +1,10 @@
 <template>
-  <!--Jag använde först vanliga knappar och kopplade ihop med bild osv manuellt men såg sedan att någon hade gjort ett exempel med b-card
-                  så jag kollade upp hur man använder det och bestämde mig för att göra på detta sättet istället. Känns smidigare. Har inte testat bootstrap
-                  så mycket än så skall skapa ett separat dokument på datorn så jag kan se hur det ser ut och style'a så det ser rätt ut då.
-                  Majoriteten av koden skriven 02-20-2024 //Jonathan-->
-  <div class="container">
+
+  <div id="container">
     <div id="conOne" class="cons">
       <b-card id="cardOne" class="cards">
         <img
-          style="max-width: 15rem; max-height: 10rem"
+          style="max-width: 15rem; max-height: 8rem"
           src="/src/assets/Andriod.jpg"
           alt="Android"
         />
@@ -23,14 +20,14 @@
     <div id="conTwo" class="cons">
       <b-card id="cardTwo" class="cards">
         <img
-          style="max-width: 15rem; max-height: 10rem"
+          style="max-width: 15rem; max-height: 8rem"
           src="/src/assets/Quiz.jpg"
           alt="Quiz"
         />
         <b-card-text>
           <h1>Quiz</h1>
 
-          <p>Test your knowledge in a quiz!</p>
+          <p>Test your knowledge in a quiz</p>
         </b-card-text>
 
         <b-button id="buttons" router-link to="/Quiz">Start</b-button>
@@ -40,7 +37,7 @@
     <div id="conThree" class="cons">
       <b-card id="cardThree" class="cards">
         <img
-          style="max-width: 15rem; max-height: 10rem"
+          style="max-width: 15rem; max-height: 8rem"
           src="/src/assets/Community.jpg"
           alt="Community"
         />
@@ -48,68 +45,60 @@
           <h1>Community</h1>
 
           <p>
-            Join the community with others and share your thoughts and skills
+            Join the community with others
           </p>
         </b-card-text>
 
         <b-button id="buttons" router-link to="/Quiz">Start</b-button>
       </b-card>
     </div>
-    <!--Kommenterade ut den tillfälliga lösningen och fixade den första knappen istället //Jonathan-->
-    <!--Införde denna sålänge för ha något slags sätt att hoppa ifrån HomeView -> SecView -> androidView
-      Tar bort detta när mer saker har införts till sidan //Martin-->
-
-    <!-- <div>
-    <b-card>
-      <router-link to="/android">
-        <img
-          src="../assets/Andriod.jpg"
-          alt="android"
-          style="max-width: 20rem"
-          class="mb-2"
-        />
-      </router-link>
-    </b-card>
-  </div> -->
   </div>
 </template>
 
 <script>
 export default {
   name: "SecView",
-
-  // methods: {
-
-  //   navigateToNextPage() { //Metod för att knappen ska navigera till nästa komponent, komponentnamn i parantesen
-  //     this.$router.push({name: }) //komponentnamn i name
-  //   }
-
-  // }
 };
 </script>
 
 <style>
-@media screen and (max-width: 768px) {
-  .container_secview {
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
-    max-width: 100vh;
-    padding-top: 50px;
-    justify-content: center;
-  }
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
-  .cons {
-    margin: 1rem;
-  }
+.cards {
+  display: flex;
+  min-height: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
 
-  .cards {
-    height: 23rem;
-    padding: 1rem;
-  }
+.cons {
+  margin: 0.5rem;
+}
 
-  #buttons {
-    background-color: #c7e291;
+#buttons {
+  background-color: #c7e291;
+  width: 15rem;
+  height: 3rem;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#buttons:hover {
+  background-color: #8ea169;
+  transform: scale(105%);
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    flex-direction: row;
   }
 }
 </style>
