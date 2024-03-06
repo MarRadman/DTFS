@@ -51,6 +51,7 @@ export default {
     align-content: space-between;
     width: auto;
     margin-top: 40px;
+    max-width: 100vh;
   }
 
   .mb-2 {
@@ -72,14 +73,15 @@ export default {
     .container {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
-      max-width: 100vh;
+      max-width: 100%;
     }
 
     .mb-2 {
       margin: 10px;
       min-width: 17rem;
-      max-width: 100vh;
+      max-width: 100%;
     }
   }
 </style>
